@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Rially</string>
+    <string name="action_settings">Settings</string>
+    <string name="button">Submit</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="bekijk_opdrachten">Bekijk opdrachten</string>
+    <string name="voeg_opdracht_toe">Voeg opdrach toe</string>
+</resources>
