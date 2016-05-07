@@ -21,10 +21,15 @@ class db_connect
         require_once __DIR__ . '/db_config.php';
 
         // Connecting to mysql database
-        $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die (mysqil_error());
+        $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE  );
+
+        if ($con->connect_error) {
+            die('Connect Error (' . $con->connect_errno . ') '
+                . $con->connect_error);
+        }
 
         // Selecting the database
-        $db = mysqli_select_db(DB_DATABASE) or die(mysqli_error()) or die (mysqli_error());
+       // $db = mysqli_select_db(DB_DATABASE) or die(mysqli_error()) or die (mysqli_error());
 
         // returning connection cursor
         return $con;

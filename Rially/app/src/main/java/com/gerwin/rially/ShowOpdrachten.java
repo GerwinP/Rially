@@ -9,13 +9,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.gson.JsonParser;
+
 public class ShowOpdrachten extends ListActivity {
 
     // Progress dialog
     private ProgressDialog pDialog;
 
     // Creating JSON Parser object
-    JSONParser jParser = new JSONParser();
+    JsonParser jParser = new JsonParser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
