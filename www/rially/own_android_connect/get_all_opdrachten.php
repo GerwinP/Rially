@@ -34,6 +34,9 @@ if (mysqli_num_rows($result) > 0) {
     // success
     $response["succes"] = 1;
 
+    //close database
+    $db->close();
+
     //echoing JSON response
     echo json_encode($response);
 } else {

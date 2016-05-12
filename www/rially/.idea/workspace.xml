@@ -21,91 +21,7 @@
     <favorites_list name="rially" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/db_config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_connect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/db_connect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_opdracht.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/create_opdracht.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-              <folding>
-                <marker date="1462460264637" expanded="true" signature="533:585" placeholder="INSERT INTO opdrachten... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_all_opdrachten.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/get_all_opdrachten.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-              <folding>
-                <element signature="e#6#137#0#PHP" expanded="true" />
-                <marker date="1462461588454" expanded="true" signature="373:397" placeholder="SELECT * FRO... opdrachten" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update_opdracht.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android_connect/update_opdracht.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-              <folding>
-                <element signature="e#6#178#0#PHP" expanded="true" />
-                <marker date="1462461876971" expanded="true" signature="588:632" placeholder="UPDATE opdra... " />
-                <marker date="1462461876971" expanded="true" signature="588:649" placeholder="UPDATE opdra... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delete_opdracht.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/android_connect/delete_opdracht.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-              <folding>
-                <element signature="e#6#174#0#PHP" expanded="true" />
-                <marker date="1462462637453" expanded="true" signature="502:536" placeholder="DELETE FROM " />
-                <marker date="1462462637453" expanded="true" signature="502:539" placeholder="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,6 +33,10 @@
         <option value="$PROJECT_DIR$/android_connect/get_all_opdrachten.php" />
         <option value="$PROJECT_DIR$/android_connect/update_opdracht.php" />
         <option value="$PROJECT_DIR$/android_connect/delete_opdracht.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/create_opdracht.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/delete_opdracht.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/update_opdracht.php" />
       </list>
     </option>
   </component>
@@ -160,13 +80,26 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="rially" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="own_android_connect" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -186,6 +119,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,17 +174,18 @@
       <workItem from="1462457833290" duration="23000" />
       <workItem from="1462458015193" duration="5218000" />
       <workItem from="1462475332209" duration="595000" />
+      <workItem from="1463058469795" duration="5869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5836000" />
+    <option name="totallyTimeSpent" value="11705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10364583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -314,6 +249,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
           <folding>
+            <element signature="e#6#190#0#PHP" expanded="true" />
             <marker date="1462460264637" expanded="true" signature="533:585" placeholder="INSERT INTO opdrachten... " />
           </folding>
         </state>
@@ -335,7 +271,6 @@
         <state relative-caret-position="663">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding>
-            <element signature="e#6#178#0#PHP" expanded="true" />
             <marker date="1462461876971" expanded="true" signature="588:632" placeholder="UPDATE opdra... " />
             <marker date="1462461876971" expanded="true" signature="588:649" placeholder="UPDATE opdra... " />
           </folding>
@@ -383,6 +318,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
           <folding>
+            <element signature="e#6#190#0#PHP" expanded="true" />
             <marker date="1462460264637" expanded="true" signature="533:585" placeholder="INSERT INTO opdrachten... " />
           </folding>
         </state>
@@ -404,7 +340,6 @@
         <state relative-caret-position="663">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
           <folding>
-            <element signature="e#6#178#0#PHP" expanded="true" />
             <marker date="1462461876971" expanded="true" signature="588:632" placeholder="UPDATE opdra... " />
             <marker date="1462461876971" expanded="true" signature="588:649" placeholder="UPDATE opdra... " />
           </folding>
@@ -413,12 +348,129 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/android_connect/delete_opdracht.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#6#174#0#PHP" expanded="true" />
             <marker date="1462462637453" expanded="true" signature="502:536" placeholder="DELETE FROM " />
             <marker date="1462462637453" expanded="true" signature="502:539" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/db_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/get_all_opdrachten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding>
+            <element signature="e#6#137#0#PHP" expanded="true" />
+            <marker date="1462461588454" expanded="true" signature="373:397" placeholder="SELECT * FRO... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1463061717744" expanded="true" signature="356:380" placeholder="SELECT * FRO... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/delete_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1463063549701" expanded="true" signature="449:482" placeholder="DELETE FROM " />
+            <marker date="1463063549701" expanded="true" signature="449:483" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/create_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#190#0#PHP" expanded="true" />
+            <marker date="1462460264637" expanded="true" signature="533:585" placeholder="INSERT INTO opdrachten... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/db_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/delete_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#174#0#PHP" expanded="true" />
+            <marker date="1462462637453" expanded="true" signature="502:536" placeholder="DELETE FROM " />
+            <marker date="1462462637453" expanded="true" signature="502:539" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_connect/update_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <marker date="1462461876971" expanded="true" signature="588:632" placeholder="UPDATE opdra... " />
+            <marker date="1462461876971" expanded="true" signature="588:649" placeholder="UPDATE opdra... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1463064688914" expanded="true" signature="519:552" placeholder="UPDATE odpra... " />
+            <marker date="1463064688914" expanded="true" signature="519:553" placeholder="UPDATE odpra... " />
+            <marker date="1463064688914" expanded="true" signature="519:572" placeholder="UPDATE odpra... " />
+            <marker date="1463064688914" expanded="true" signature="519:573" placeholder="UPDATE opdra... " />
+            <marker date="1463064688914" expanded="true" signature="519:576" placeholder="UPDATE odpra... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/create_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1463063196541" expanded="true" signature="550:602" placeholder="INSERT INTO opdrachten... " />
           </folding>
         </state>
       </provider>
