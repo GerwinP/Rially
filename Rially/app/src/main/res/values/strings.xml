@@ -7,4 +7,5 @@
     <string name="password">Password</string>
     <string name="bekijk_opdrachten">Bekijk opdrachten</string>
     <string name="voeg_opdracht_toe">Voeg opdrach toe</string>
+    <string name="title_activity_show_opdrachten">show_opdrachten</string>
 </resources>

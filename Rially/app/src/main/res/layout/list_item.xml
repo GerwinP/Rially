@@ -3,11 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView android:id="@+id/pid"
+    <!-- Opdracht id, is hidden. Used to pass to other activity -->
+    <TextView android:id="@+id/oid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"/>
 
+    <!-- Opdracht label -->
     <TextView android:id="@+id/opdracht"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

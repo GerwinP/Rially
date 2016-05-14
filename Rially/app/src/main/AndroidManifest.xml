@@ -36,7 +36,11 @@
                 android:value="com.gerwin.rially.MainActivity" />
         </activity>
         <activity android:name=".ShowOpdrachten" />
-        <activity android:name=".AddOpdracht"></activity>
+        <activity android:name=".AddOpdracht" />
+        <activity
+            android:name=".show_opdrachten"
+            android:label="@string/title_activity_show_opdrachten"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

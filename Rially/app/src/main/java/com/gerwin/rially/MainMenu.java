@@ -40,27 +40,6 @@ public class MainMenu extends AppCompatActivity {
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
 
-        // View opdrachten click event
-        btnViewOpdrachten.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                //Launching all opdrachten activity
-                Intent i = new Intent(getApplicationContext(), ShowOpdrachten.class);
-                startActivity(i);
-            }
-        });
-
-        //Add opdracht click event
-        btnNewOpdracht.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                //Launching create new opdracht activity
-                Intent i = new Intent(getApplicationContext(), AddOpdracht.class);
-                startActivity(i);
-            }
-        });
     }
 
     public void dispatchTakePictureIntent(View view) {
