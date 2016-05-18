@@ -6,6 +6,29 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="bekijk_opdrachten">Bekijk opdrachten</string>
-    <string name="voeg_opdracht_toe">Voeg opdrach toe</string>
+    <string name="voeg_opdracht_toe">Voeg opdracht toe</string>
     <string name="title_activity_show_opdrachten">show_opdrachten</string>
+    <string name="title_activity_rules">Rules</string>
+    <string name="regels">
+        1. Houd je altijd aan de wet en in het bijzonder aan de verkeersregels, we willen geen ongelukken.\n
+        2. Wees sportief!\n
+        3. Verzamel zoveel mogelijk bewijs voor de opdrachten (foto’s, video’s, geluidsopnames, of iets dergelijks) en zoveel mogelijk materiaal van de dag zelf (op de borrel willen wij graag alle goede verhalen horen).\n
+        4. Originaliteit is belangrijk en hoe origineler de opdrachten dan ook uitgevoerd zullen worden, hoe meer kans je hebt om te winnen.\n
+        5. Neem, indien je de laatste bent, ook het mapje waar de puzzel in zit mee.\n
+        6. De commissie heeft het eindoordeel over jullie gemaakte opdrachten. De commissie is bovendien om te kopen.
+    </string>
+    <string name="lunch_en_borrel">
+        - De puzzels zijn zo ontworpen dat jullie alle tijd hebben om opdrachten uit te voeren en te puzzelen. Probeer niet zo snel mogelijk terug te zijn, maar zoveel mogelijk opdrachten te maken, die leveren immers punten op!\n
+        - Lunch: In de puzzelroute verwijst de tweede puzzel naar de lunchlocatie. We staan tussen 12.30 en 14.30 met een lunch op jullie te wachten.\n
+        - Eten en borrel: Rond 18:15 uur zal het eten aangebroken worden, dus probeer tegen die tijd op de universiteit te zijn.
+    </string>
+    <string name="opdrachten">
+        - Het is handig om minstens 1 telefoon te hebben met mobiel internet.\n
+        - Gemaakte opdrachten kun je inleveren via deze app
+    </string>
+    <string name="verdere_informatie">
+        Mocht je nog problemen hebben kun je naar 1 van ons bellen.
+    </string>
+    <string name="opdrachtenTitle">Opdrachten</string>
+    <string name="verdere_informatieTitle">Verdere informatie</string>
 </resources>

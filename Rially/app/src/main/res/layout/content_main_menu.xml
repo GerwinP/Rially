@@ -29,30 +29,50 @@
         <Button android:id="@+id/get_photo"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
             android:text="Upload foto"
-            android:onClick="dispatchTakePictureIntent"/>
+            android:onClick="dispatchTakePictureIntent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/get_video"
+            android:layout_alignEnd="@+id/get_video" />
 
         <Button android:id="@+id/get_video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Upload video"
             android:layout_below="@+id/get_photo"
-            android:layout_centerHorizontal="true"
-            android:text="Upload video"/>
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button android:id="@+id/btnViewOpdrachten"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_below="@id/get_video"
-            android:layout_centerHorizontal="true"
-            android:text="@string/bekijk_opdrachten"/>
+            android:text="@string/bekijk_opdrachten"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <Button android:id="@+id/btnNewOpdracht"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
             android:text="@string/voeg_opdracht_toe"
-            android:layout_below="@id/btnViewOpdrachten"/>
+            android:layout_below="@+id/btnViewOpdrachten"
+            android:layout_alignLeft="@+id/btnViewOpdrachten"
+            android:layout_alignStart="@+id/btnViewOpdrachten"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regels"
+            android:id="@+id/btnRegels"
+            android:layout_below="@+id/get_video"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/get_photo"
+            android:layout_alignEnd="@+id/get_photo" />
     </RelativeLayout>
 
 

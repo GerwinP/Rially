@@ -6,7 +6,7 @@
  * Time: 16:28
  */
 define('DB_USER', "root"); //the db user
-define('DB_PASSWORD', "");
+define('DB_PASSWORD', "gerwin1995");
 define('DB_DATABASE', "rially");
 define('DB_SERVER', "localhost");
 

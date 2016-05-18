@@ -68,7 +68,7 @@ public class show_opdrachten extends ListActivity {
 
     ArrayList<HashMap<String, String>> opdrachtenList;
 
-    private static String url_all_opdrachten = "http://localhost/rially/own_android_connect/get_all_opdrachten.php";
+    private static String url_all_opdrachten = "http://127.0.0.1/rially/own_android_connect/get_all_opdrachten.php";
 
     //JSON Node names
     private static final String TAG_SUCCESS = "success";

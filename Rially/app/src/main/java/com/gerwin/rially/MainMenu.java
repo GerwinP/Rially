@@ -27,6 +27,8 @@ public class MainMenu extends AppCompatActivity {
     String mCurrentPhotoPath;
     Button btnViewOpdrachten;
     Button btnNewOpdracht;
+    Button btnTakePicture;
+    Button btnRegels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +39,44 @@ public class MainMenu extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // The buttons
+        btnTakePicture = (Button) findViewById(R.id.get_photo);
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
+        btnRegels = (Button) findViewById(R.id.btnRegels);
+
+        btnRegels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), Rules.class);
+                startActivity(i);
+            }
+        });
+
+        btnTakePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispatchTakePictureIntent(view);
+            }
+        });
+
+        //view opdrachten click event
+        btnViewOpdrachten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), show_opdrachten.class);
+                startActivity(i);
+            }
+        });
 
     }
 
     public void dispatchTakePictureIntent(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+        }
+        /*
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             File photoFile = null;
             try {
@@ -58,6 +90,7 @@ public class MainMenu extends AppCompatActivity {
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
+        */
     }
 
     private File createImageFile() throws IOException {
