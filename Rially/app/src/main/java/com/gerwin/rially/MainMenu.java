@@ -52,6 +52,14 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        btnNewOpdracht.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), AddOpdracht.class);
+                startActivity(i);
+            }
+        });
+
         btnTakePicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

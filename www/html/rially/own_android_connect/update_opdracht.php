@@ -26,18 +26,18 @@ if (isset($_POST['id']) && isset($_GET['opdracht'])) {
 
     //check if row is updated or not
     if ($result) {
-        $response["succes"] = 1;
+        $response["success"] = 1;
         $response["message"] = "Opdracht is successfully updated";
 
         echo json_encode($response);
     } else {
-        $response["succes"] = 0;
+        $response["success"] = 0;
         $response["message"] = "Failed to update opdracht";
 
         echo json_encode($response);
     }
 } else {
-    $response["succes"] = 0;
+    $response["success"] = 0;
     $response["message"] = "Required field missing";
 
     echo json_encode($response);

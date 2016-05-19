@@ -41,6 +41,10 @@
         <activity
             android:name=".Rules"
             android:label="@string/title_activity_rules"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddOpdracht"
+            android:label="@string/title_activity_add_opdracht"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

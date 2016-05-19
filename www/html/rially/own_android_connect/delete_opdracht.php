@@ -26,14 +26,14 @@ if (isset($_POST['id'])) {
     //check if row is deleted or not
     if (mysqli_affected_rows($db) > 0) {
         //successfully updated
-        $response["succes"] = 1;
+        $response["success"] = 1;
         $response["message"] = "Opdracht succesfully deleted";
 
         echo json_encode($response);
     }
 } else {
     //required field is missing
-    $response["succes"] = 0;
+    $response["success"] = 0;
     $response["message"] = "Required field is missing";
 
     echo json_encode($response);

@@ -2,12 +2,10 @@ package com.gerwin.rially;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Pair;
 import android.view.View;
@@ -15,23 +13,19 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.gerwin.rially.utils.ServerConfig;
+import com.gerwin.rially.utils.JSONTags;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,13 +62,7 @@ public class show_opdrachten extends ListActivity {
 
     ArrayList<HashMap<String, String>> opdrachtenList;
 
-    private static String url_all_opdrachten = "http://127.0.0.1/rially/own_android_connect/get_all_opdrachten.php";
-
-    //JSON Node names
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_OPDRACHTEN = "opdrachten";
-    private static final String TAG_ID = "id";
-    private static final String TAG_OPDRACHT = "opdracht";
+    private static String url_all_opdrachten = ServerConfig.getGetAllOpdrachten();
 
     // products JSONArray
     JSONArray opdrachten = null;
@@ -98,27 +86,28 @@ public class show_opdrachten extends ListActivity {
             //params.add(new Pair<>("password", password));
             List<Pair<String, String>> params = new ArrayList<>();
 
+            HttpURLConnection connection = null;
             try {
                 URL url = new URL(url_all_opdrachten);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection = (HttpURLConnection) url.openConnection();
                 connection.connect();
                 int response = connection.getResponseCode();
                 InputStream inputStream = connection.getInputStream();
                 String contentAsString = readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
-                int success = (int) json.get(TAG_SUCCESS);
+                int success = (int) json.get(JSONTags.TAG_SUCCESS.tag());
                 if (success == 1) {
-                    opdrachten = json.getJSONArray(TAG_OPDRACHTEN);
+                    opdrachten = json.getJSONArray(JSONTags.TAG_OPDRACHTEN.tag());
 
                     for (int i = 0; i < opdrachten.length(); i++) {
                         JSONObject c = opdrachten.getJSONObject(i);
 
-                        String id = c.getString(TAG_ID);
-                        String opdracht = c.getString(TAG_OPDRACHT);
+                        String id = c.getString(JSONTags.TAG_ID.tag());
+                        String opdracht = c.getString(JSONTags.TAG_OPDRACHT.tag());
 
                         HashMap<String, String> map = new HashMap<>();
-                        map.put(TAG_ID, id);
-                        map.put(TAG_OPDRACHT, opdracht);
+                        map.put(JSONTags.TAG_ID.tag(), id);
+                        map.put(JSONTags.TAG_OPDRACHT.tag(), opdracht);
                         opdrachtenList.add(map);
                     }
                 } else {
@@ -127,6 +116,10 @@ public class show_opdrachten extends ListActivity {
                 }
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
             }
             return null;
         }
@@ -138,7 +131,7 @@ public class show_opdrachten extends ListActivity {
                 public void run() {
                     ListAdapter adapter = new SimpleAdapter(
                             show_opdrachten.this, opdrachtenList,
-                            R.layout.list_item, new String[] {TAG_ID, TAG_OPDRACHT} ,
+                            R.layout.list_item, new String[] {JSONTags.TAG_ID.tag(), JSONTags.TAG_OPDRACHT.tag()} ,
                             new int[] {R.id.oid, R.id.opdracht}
                     );
                     setListAdapter(adapter);

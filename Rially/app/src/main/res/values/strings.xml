@@ -31,4 +31,5 @@
     </string>
     <string name="opdrachtenTitle">Opdrachten</string>
     <string name="verdere_informatieTitle">Verdere informatie</string>
+    <string name="title_activity_add_opdracht">AddOpdracht</string>
 </resources>

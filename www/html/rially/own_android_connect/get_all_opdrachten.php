@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {
         array_push($response["opdrachten"], $opdracht);
     }
     // success
-    $response["succes"] = 1;
+    $response["success"] = 1;
 
     //close database
     $db->close();

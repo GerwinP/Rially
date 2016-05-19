@@ -28,21 +28,21 @@ if (isset($_POST['opdracht'])) {
     //check if row is inserted
     if ($result) {
         //successfully inserted into database
-        $response["succes"] = 1;
+        $response["success"] = 1;
         $response["message"] = "Opdracht successfully created";
 
         //echoing JSON response
         echo json_encode($response);
     } else {
         //failed to insert row
-        $response["succes"] = 0;
+        $response["success"] = 0;
         $response["message"] = "Oops! An error occurred!";
 
         echo json_encode($response);
     }
 } else {
     //required field was missing
-    $response["succes"] = 0;
+    $response["success"] = 0;
     $response["message"] = "Required field is missing";
 
     echo json_encode($response);
