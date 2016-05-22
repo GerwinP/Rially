@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/submit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="77dp" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button"
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="startApp"/>

@@ -7,8 +7,11 @@ public class ServerConfig {
 
     private static final String getAllOpdrachten = "http://10.0.2.2/rially/own_android_connect/get_all_opdrachten.php";
     private static final String createOpdracht = "http://10.0.2.2/rially/own_android_connect/create_opdracht.php";
+    private static final String logIn = "http://10.0.2.2/rially/own_android_connect/logint.php";
 
     public static String getGetAllOpdrachten () { return getAllOpdrachten; }
 
     public static String getCreateOpdracht () { return createOpdracht; }
+
+    public static String getLogIn () { return logIn; }
 }
