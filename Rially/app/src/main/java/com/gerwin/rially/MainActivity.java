@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         });
         */
     }
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -102,12 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void startApp(View view) {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
-    }
-
+    */
     private ProgressDialog progressDialog;
 
     private static String url_login = ServerConfig.getLogIn();
@@ -116,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         private String username = usernameField.getText().toString();
         private int success = 0;
+        boolean isAdmin = false;
 
         @Override
         protected void onPreExecute() {
@@ -155,7 +151,11 @@ public class MainActivity extends AppCompatActivity {
                 String contentAsString = Utils.readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
                 success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
-
+                int isAdminint = Integer.parseInt((String)json.get(JSONTags.TAG_ADMIN.tag()));
+                //System.out.println("The isAdmin is: " + isAdminint.toString());
+                if (isAdminint != 0) {
+                    isAdmin = true;
+                }
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {
@@ -171,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
             progressDialog.dismiss();
             if (success == 1) {
                 Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                i.putExtra("username", username);
+                i.putExtra("isAdmin", isAdmin);
                 startActivity(i);
                 finish();
             } else {

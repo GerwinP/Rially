@@ -57,17 +57,17 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/voeg_opdracht_toe"
+            android:visibility="gone"
             android:layout_below="@+id/btnViewOpdrachten"
             android:layout_alignLeft="@+id/btnViewOpdrachten"
             android:layout_alignStart="@+id/btnViewOpdrachten"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <Button
+        <Button android:id="@+id/btnRegels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regels"
-            android:id="@+id/btnRegels"
             android:layout_below="@+id/get_video"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -80,7 +80,8 @@
             android:text="Create user"
             android:layout_below="@+id/btnNewOpdracht"
             android:layout_alignLeft="@+id/btnNewOpdracht"
-            android:layout_alignStart="@+id/btnNewOpdracht" />
+            android:layout_alignStart="@+id/btnNewOpdracht"
+            android:visibility="gone"/>
     </RelativeLayout>
 
 

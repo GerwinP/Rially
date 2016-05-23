@@ -9,9 +9,9 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_bar_activity_content"
+        android:id="@+id/action_bar_user_name"
         android:orderInCategory="150"
         android:title="User"
         app:showAsAction="always"
-        ></item>
+        />
 </menu>

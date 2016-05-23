@@ -22,13 +22,15 @@ if (isset($_POST['username']) && isset($_POST['hpassword'])) {
     }
 
     $success = false;
-
+    
     $result = mysqli_query($db, "SELECT * FROM users WHERE username='$username' AND password='$hpassword'");
     while ($row = mysqli_fetch_array($result)) {
+        $isAdmin = $row["admin"];
         $success = true;
     }
     if ($success) {
         $response["username"] = $username;
+        $response["isAdmin"] = $isAdmin;
         $response["message"] = "Successfully logged in";
         $response["success"] = 1;
 

@@ -12,6 +12,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.io.File;
@@ -30,6 +32,8 @@ public class MainMenu extends AppCompatActivity {
     Button btnTakePicture;
     Button btnRegels;
     Button createUser;
+    private String username = "";
+    private boolean isAdmin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,14 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        //Get the values from the login screen
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            username = extras.getString("username");
+            isAdmin = extras.getBoolean("isAdmin");
+        }
 
         // The buttons
         btnTakePicture = (Button) findViewById(R.id.get_photo);
@@ -45,6 +56,8 @@ public class MainMenu extends AppCompatActivity {
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
         createUser = (Button) findViewById(R.id.createUserButton);
+
+        enableButtons(isAdmin);
 
         btnRegels.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +98,14 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem userItem = (MenuItem) menu.findItem(R.id.action_bar_user_name);
+        userItem.setTitle(username);
+        return true;
     }
 
     public void dispatchTakePictureIntent(View view) {
@@ -127,6 +147,11 @@ public class MainMenu extends AppCompatActivity {
         return image;
     }
 
-
+    private void enableButtons(boolean isAdmin) {
+        if (isAdmin) {
+            btnNewOpdracht.setVisibility(View.VISIBLE);
+            createUser.setVisibility(View.VISIBLE);
+        }
+    }
 
 }

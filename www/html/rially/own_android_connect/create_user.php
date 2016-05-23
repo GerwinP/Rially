@@ -10,10 +10,11 @@ require_once __DIR__ . '/db_config.php';
 
 $response = array();
 
-if (isset($_POST['username']) && isset($_POST['hpassword'])) {
+if (isset($_POST['username']) && isset($_POST['hpassword']) && isset($_POST['isAdmin'])) {
     
     $username = $_POST['username'];
     $hpassword = $_POST['hpassword'];
+    $isAdmin = $_POST['isAdmin'];
     
     $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
     
@@ -21,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['hpassword'])) {
         die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
     }
     
-    $result = mysqli_query($db, "INSERT INTO users(username, password) VALUES('$username', '$hpassword')");
+    $result = mysqli_query($db, "INSERT INTO users(username, password, admin) VALUES('$username', '$hpassword', '$isAdmin')");
 
     if ($result) {
         $response["success"] = 1;

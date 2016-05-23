@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.gerwin.rially.utils.JSONTags;
@@ -38,6 +39,7 @@ public class AddUser extends AppCompatActivity {
     private EditText usernameField;
     private EditText passwordField;
     private Button addUser;
+    private CheckBox isAdminBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class AddUser extends AppCompatActivity {
         usernameField = (EditText) findViewById(R.id.createUsername);
         passwordField = (EditText) findViewById(R.id.createPassword);
         addUser = (Button) findViewById(R.id.createUser);
+        isAdminBox = (CheckBox) findViewById(R.id.isAdminCheck);
 
         addUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +78,8 @@ public class AddUser extends AppCompatActivity {
 
         private String username = usernameField.getText().toString();
         private String hpassword = hashPassword();
+        private boolean isChecked = isAdminBox.isChecked();
+        private int isCheckedInt = 0;
 
         @Override
         protected void onPreExecute() {
@@ -91,14 +96,20 @@ public class AddUser extends AppCompatActivity {
             List<Pair<String, String>> params = new ArrayList<>();
             HttpURLConnection connection = null;
 
+            if (isChecked) {
+                isCheckedInt = 1;
+            }
+
             try {
                 params.add(new Pair("username", username));
                 params.add(new Pair("hpassword", hpassword));
+                params.add(new Pair("isAdmin", Integer.toString(isCheckedInt)));
                 URL url = new URL(url_create_user);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setRequestProperty("username", username);
                 connection.setRequestProperty("hpassword", hpassword);
+                connection.setRequestProperty("isAdmin", Integer.toString(isCheckedInt));
 
                 OutputStream outputpost = new BufferedOutputStream(connection.getOutputStream());
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputpost, "UTF-8"));
