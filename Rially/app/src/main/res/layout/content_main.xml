@@ -29,13 +29,20 @@
         android:layout_marginTop="7dp"
         android:layout_marginBottom="77dp" />
 
+    <TextView android:id="@+id/wrongpasswordtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/submit"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:text="@string/wrongpassword"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button"
         android:id="@+id/submit"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="startApp"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

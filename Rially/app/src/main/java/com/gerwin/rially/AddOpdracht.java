@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import com.gerwin.rially.utils.JSONTags;
 import com.gerwin.rially.utils.ServerConfig;
+import com.gerwin.rially.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -80,7 +81,7 @@ public class AddOpdracht extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             progressDialog = new ProgressDialog(AddOpdracht.this);
-            progressDialog.setMessage("Createing opdracht...");
+            progressDialog.setMessage("Creating opdracht...");
             progressDialog.setIndeterminate(false);
             progressDialog.setCancelable(true);
             progressDialog.show();
@@ -104,7 +105,7 @@ public class AddOpdracht extends AppCompatActivity {
 
                 OutputStream outputpost = new BufferedOutputStream(connection.getOutputStream());
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputpost, "UTF-8"));
-                writer.write(getQuery(params));
+                writer.write(Utils.getQuery(params));
                 writer.flush();
                 writer.close();
                 outputpost.close();
@@ -112,7 +113,7 @@ public class AddOpdracht extends AppCompatActivity {
                 int response = connection.getResponseCode();
 
                 InputStream inputStream = connection.getInputStream();
-                String contentAsString = readIt(inputStream);
+                String contentAsString = Utils.readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
                 int success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
                 if (success == 1) {
@@ -136,33 +137,5 @@ public class AddOpdracht extends AppCompatActivity {
         protected  void onPostExecute(String file_url) {
             progressDialog.dismiss();
         }
-
-        private String getQuery(List<Pair<String, String>> params) throws UnsupportedEncodingException {
-            StringBuilder result = new StringBuilder();
-            boolean first = true;
-            for (Pair pair : params) {
-                if (first) {
-                    first = false;
-                } else {
-                    result.append("&");
-                }
-                result.append(URLEncoder.encode((String)pair.first, "UTF-8"));
-                result.append("=");
-                result.append(URLEncoder.encode((String)pair.second, "UTF-8"));
-            }
-
-            return result.toString();
-        }
-    }
-
-    private String readIt(InputStream is) throws IOException {
-        BufferedReader reader = null;
-        reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-        StringBuilder responseStrBuilder = new StringBuilder();
-        String inputStr;
-        while ((inputStr = reader.readLine()) != null) {
-            responseStrBuilder.append(inputStr);
-        }
-        return responseStrBuilder.toString();
     }
 }

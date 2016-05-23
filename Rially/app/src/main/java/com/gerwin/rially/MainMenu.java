@@ -29,6 +29,7 @@ public class MainMenu extends AppCompatActivity {
     Button btnNewOpdracht;
     Button btnTakePicture;
     Button btnRegels;
+    Button createUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,7 @@ public class MainMenu extends AppCompatActivity {
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
+        createUser = (Button) findViewById(R.id.createUserButton);
 
         btnRegels.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +74,14 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), show_opdrachten.class);
+                startActivity(i);
+            }
+        });
+
+        createUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), AddUser.class);
                 startActivity(i);
             }
         });

@@ -11,8 +11,9 @@ public enum JSONTags {
     TAG_OPDRACHT ("opdracht"),
     TAG_USERS ("users"),
     TAG_UID ("uid"),
-    TAG_NAME ("name"),
-    TAG_PASSWORD ("password");
+    TAG_NAME ("username"),
+    TAG_PASSWORD ("password"),
+    TAG_MESSAGE ("message");
 
     private final String tag;
 

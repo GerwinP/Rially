@@ -45,6 +45,10 @@
         <activity
             android:name=".AddOpdracht"
             android:label="@string/title_activity_add_opdracht"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddUser"
+            android:label="@string/title_activity_add_user"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

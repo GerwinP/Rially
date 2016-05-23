@@ -1,8 +1,6 @@
 package com.gerwin.rially;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,11 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Pair;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.gerwin.rially.utils.JSONTags;
 import com.gerwin.rially.utils.ServerConfig;
@@ -26,49 +21,43 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class AddUser extends AppCompatActivity {
 
-    private Button loginButton;
     private EditText usernameField;
     private EditText passwordField;
-    public TextView wrongpasswordtext;
+    private Button addUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_user);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        loginButton = (Button) findViewById(R.id.submit);
-        usernameField = (EditText) findViewById(R.id.username);
-        passwordField = (EditText) findViewById(R.id.password);
-        wrongpasswordtext = (TextView) findViewById(R.id.wrongpasswordtext);
+        usernameField = (EditText) findViewById(R.id.createUsername);
+        passwordField = (EditText) findViewById(R.id.createPassword);
+        addUser = (Button) findViewById(R.id.createUser);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        addUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new LogIn().execute();
+                new AddUserEx().execute();
+                addUser.setClickable(false);
             }
         });
 
-        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,53 +66,23 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        */
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void startApp(View view) {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
-    }
-
+    private static final String url_create_user = ServerConfig.getAddUser();
     private ProgressDialog progressDialog;
 
-    private static String url_login = ServerConfig.getLogIn();
-
-    class LogIn extends AsyncTask<String, String, String> {
+    class AddUserEx extends AsyncTask<String, String, String> {
 
         private String username = usernameField.getText().toString();
-        private int success = 0;
+        private String hpassword = hashPassword();
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            progressDialog = new ProgressDialog(MainActivity.this);
-            progressDialog.setMessage("Logging in");
+            progressDialog = new ProgressDialog(AddUser.this);
+            progressDialog.setMessage("Adding user");
             progressDialog.setIndeterminate(false);
-            progressDialog.setCancelable(false);
+            progressDialog.setCancelable(true);
             progressDialog.show();
         }
 
@@ -131,16 +90,15 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... args) {
             List<Pair<String, String>> params = new ArrayList<>();
             HttpURLConnection connection = null;
+
             try {
-                String hpassword = hashPassword();
                 params.add(new Pair("username", username));
                 params.add(new Pair("hpassword", hpassword));
-                URL url = new URL(url_login);
+                URL url = new URL(url_create_user);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
                 connection.setRequestProperty("username", username);
                 connection.setRequestProperty("hpassword", hpassword);
-                connection.setDoOutput(true);
 
                 OutputStream outputpost = new BufferedOutputStream(connection.getOutputStream());
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputpost, "UTF-8"));
@@ -148,14 +106,18 @@ public class MainActivity extends AppCompatActivity {
                 writer.flush();
                 writer.close();
                 outputpost.close();
-
                 connection.connect();
+                int response = connection.getResponseCode();
 
                 InputStream inputStream = connection.getInputStream();
                 String contentAsString = Utils.readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
-                success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
-
+                int success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
+                if (success == 1) {
+                    //Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                    //startActivity(i);
+                    finish();
+                }
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {
@@ -167,17 +129,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String file_url) {
-            progressDialog.dismiss();
-            if (success == 1) {
-                Intent i = new Intent(getApplicationContext(), MainMenu.class);
-                startActivity(i);
-                finish();
-            } else {
-                wrongpasswordtext.setVisibility(View.VISIBLE);
-            }
-        }
-
+        protected void onPostExecute(String file_url) { progressDialog.dismiss(); }
     }
 
     private String hashPassword() {

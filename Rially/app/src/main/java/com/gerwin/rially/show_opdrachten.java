@@ -15,6 +15,7 @@ import android.widget.SimpleAdapter;
 
 import com.gerwin.rially.utils.ServerConfig;
 import com.gerwin.rially.utils.JSONTags;
+import com.gerwin.rially.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -93,7 +94,7 @@ public class show_opdrachten extends ListActivity {
                 connection.connect();
                 int response = connection.getResponseCode();
                 InputStream inputStream = connection.getInputStream();
-                String contentAsString = readIt(inputStream);
+                String contentAsString = Utils.readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
                 int success = (int) json.get(JSONTags.TAG_SUCCESS.tag());
                 if (success == 1) {
@@ -139,16 +140,4 @@ public class show_opdrachten extends ListActivity {
             });
         }
     }
-
-    private String readIt(InputStream is) throws IOException {
-        BufferedReader reader = null;
-        reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-        StringBuilder responseStrBuilder = new StringBuilder();
-        String inputStr;
-        while ((inputStr = reader.readLine()) != null) {
-            responseStrBuilder.append(inputStr);
-        }
-        return responseStrBuilder.toString();
-    }
-
 }

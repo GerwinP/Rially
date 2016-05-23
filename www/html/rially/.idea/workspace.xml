@@ -23,18 +23,30 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/own_android_connect/login.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="663">
-                  <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
                   <folding>
                     <element signature="e#6#87#0#PHP" expanded="true" />
-                    <marker date="1463934966657" expanded="true" signature="514:560" placeholder="SELECT * FRO... users" />
-                    <marker date="1463934966657" expanded="true" signature="514:574" placeholder="SELECT * FRO... users" />
-                    <marker date="1463934966657" expanded="true" signature="514:586" placeholder="SELECT * FRO... users" />
-                    <marker date="1463934966657" expanded="true" signature="514:1062" placeholder="SELECT * FRO... users" />
+                    <marker date="1464010167807" expanded="true" signature="538:584" placeholder="SELECT * FRO... users" />
+                    <marker date="1464010167807" expanded="true" signature="538:598" placeholder="SELECT * FRO... users" />
+                    <marker date="1464010167807" expanded="true" signature="538:610" placeholder="SELECT * FRO... users" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="create_user.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/own_android_connect/create_user.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#6#87#0#PHP" expanded="true" />
+                    <marker date="1464000320196" expanded="true" signature="532:603" placeholder="INSERT INTO users... " />
                   </folding>
                 </state>
               </provider>
@@ -43,14 +55,27 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="get_all_opdrachten.php" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="get_all_opdrachten.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="153">
+                  <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
                   <folding>
                     <marker date="1463655279346" expanded="true" signature="356:380" placeholder="SELECT * FRO... opdrachten" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="create_opdracht.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/own_android_connect/create_opdracht.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#6#87#0#PHP" expanded="true" />
+                    <marker date="1463661884873" expanded="true" signature="550:602" placeholder="INSERT INTO opdrachten... " />
                   </folding>
                 </state>
               </provider>
@@ -59,7 +84,7 @@
           <file leaf-file-name="update_opdracht.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
+                <state relative-caret-position="170">
                   <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
                   <folding>
                     <element signature="e#6#87#0#PHP" expanded="true" />
@@ -87,6 +112,7 @@
         <option value="$PROJECT_DIR$/own_android_connect/delete_opdracht.php" />
         <option value="$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php" />
         <option value="$PROJECT_DIR$/own_android_connect/update_opdracht.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/create_user.php" />
         <option value="$PROJECT_DIR$/own_android_connect/login.php" />
       </list>
     </option>
@@ -132,8 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -172,6 +196,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,11 +254,12 @@
       <workItem from="1462475332209" duration="595000" />
       <workItem from="1463058469795" duration="5869000" />
       <workItem from="1463933352971" duration="2213000" />
+      <workItem from="1463999932829" duration="3231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13918000" />
+    <option name="totallyTimeSpent" value="17149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -273,6 +300,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/own_android_connect/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1464010167807" expanded="true" signature="538:584" placeholder="SELECT * FRO... users" />
+            <marker date="1464010167807" expanded="true" signature="538:598" placeholder="SELECT * FRO... users" />
+            <marker date="1464010167807" expanded="true" signature="538:610" placeholder="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463655279346" expanded="true" signature="356:380" placeholder="SELECT * FRO... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1463661867919" expanded="true" signature="519:573" placeholder="UPDATE opdra... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/android_connect/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -464,7 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -473,6 +533,27 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+            <marker date="1463661867919" expanded="true" signature="519:573" placeholder="UPDATE opdra... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <marker date="1463655279346" expanded="true" signature="356:380" placeholder="SELECT * FRO... opdrachten" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -487,37 +568,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php">
+    <entry file="file://$PROJECT_DIR$/own_android_connect/create_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="493">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
-            <marker date="1463661867919" expanded="true" signature="519:573" placeholder="UPDATE opdra... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/own_android_connect/get_all_opdrachten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <marker date="1463655279346" expanded="true" signature="356:380" placeholder="SELECT * FRO... opdrachten" />
+            <marker date="1464000320196" expanded="true" signature="532:603" placeholder="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="true" />
-            <marker date="1463934966657" expanded="true" signature="514:560" placeholder="SELECT * FRO... users" />
-            <marker date="1463934966657" expanded="true" signature="514:574" placeholder="SELECT * FRO... users" />
-            <marker date="1463934966657" expanded="true" signature="514:586" placeholder="SELECT * FRO... users" />
-            <marker date="1463934966657" expanded="true" signature="514:1062" placeholder="SELECT * FRO... users" />
+            <marker date="1464010167807" expanded="true" signature="538:584" placeholder="SELECT * FRO... users" />
+            <marker date="1464010167807" expanded="true" signature="538:598" placeholder="SELECT * FRO... users" />
+            <marker date="1464010167807" expanded="true" signature="538:610" placeholder="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>

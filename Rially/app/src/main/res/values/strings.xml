@@ -32,4 +32,12 @@
     <string name="opdrachtenTitle">Opdrachten</string>
     <string name="verdere_informatieTitle">Verdere informatie</string>
     <string name="title_activity_add_opdracht">AddOpdracht</string>
+    <string name="title_activity_add_user">AddUser</string>
+    <string name="usernameLabel">Username</string>
+    <string name="passwordLabel">Password</string>
+    <string name="addUser">Add user</string>
+    <string name="wrongpassword">Username/password combination does not exist</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

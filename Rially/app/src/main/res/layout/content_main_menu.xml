@@ -73,6 +73,14 @@
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/get_photo"
             android:layout_alignEnd="@+id/get_photo" />
+
+        <Button android:id="@+id/createUserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create user"
+            android:layout_below="@+id/btnNewOpdracht"
+            android:layout_alignLeft="@+id/btnNewOpdracht"
+            android:layout_alignStart="@+id/btnNewOpdracht" />
     </RelativeLayout>
 
 
