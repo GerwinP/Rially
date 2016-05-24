@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -12,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +24,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import android.Manifest;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -32,8 +35,12 @@ public class MainMenu extends AppCompatActivity {
     Button btnTakePicture;
     Button btnRegels;
     Button createUser;
+    Button btnChoosePhoto;
+    ImageView imageTestView;
     private String username = "";
     private boolean isAdmin = false;
+    private static final int SELECT_PICTURE = 100;
+    private static final String TAG = "MainMenu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +58,13 @@ public class MainMenu extends AppCompatActivity {
         }
 
         // The buttons
-        btnTakePicture = (Button) findViewById(R.id.get_photo);
+        btnTakePicture = (Button) findViewById(R.id.choosePhotoButton);
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
+        btnChoosePhoto = (Button) findViewById(R.id.choosePhotoButton);
         createUser = (Button) findViewById(R.id.createUserButton);
+        imageTestView = (ImageView) findViewById(R.id.imageTestView);
 
         enableButtons(isAdmin);
 
@@ -96,6 +105,13 @@ public class MainMenu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), AddUser.class);
                 startActivity(i);
+            }
+        });
+
+        btnChoosePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openImageChooser();
             }
         });
     }
@@ -154,4 +170,35 @@ public class MainMenu extends AppCompatActivity {
         }
     }
 
+    private void openImageChooser() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
+    }
+
+    public void onActivityResult(int requestcode, int resultcode, Intent data) {
+        if (resultcode == RESULT_OK) {
+            if (requestcode == SELECT_PICTURE) {
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    String path = getPathFromURI(selectedImageUri);
+                    Log.i(TAG, "Image Path: : " + path);
+                    imageTestView.setImageURI(selectedImageUri);
+                }
+            }
+        }
+    }
+
+    public String getPathFromURI(Uri contentUri) {
+        String res = null;
+        String[] proj = {MediaStore.Images.Media.DATA};
+        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
+        if (cursor.moveToFirst()) {
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            res = cursor.getString(column_index);
+        }
+        cursor.close();
+        return res;
+    }
 }

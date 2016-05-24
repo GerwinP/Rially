@@ -38,4 +38,7 @@
     <string name="addUser">Add user</string>
     <string name="wrongpassword">Username/password combination does not exist</string>
     <string name="userisadmin">User is admin</string>
+    <string name="choosePhotoButton">Kies een foto</string>
+    <string name="title_activity_image_upload">ImageUpload</string>
+    <string name="theImage">De afbeelding</string>
 </resources>

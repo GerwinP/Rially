@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_centerHorizontal="true"
+        android:labelFor="@+id/createUsername"
         android:text="@string/usernameLabel"/>
 
     <EditText android:id="@+id/createUsername"
@@ -31,6 +32,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/createUsername"
+        android:labelFor="@+id/createPassword"
         android:text="@string/passwordLabel"/>
 
     <EditText android:id="@+id/createPassword"
