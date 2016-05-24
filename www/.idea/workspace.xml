@@ -75,6 +75,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -95,7 +96,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -124,11 +124,12 @@
       <workItem from="1463654174664" duration="299000" />
       <workItem from="1463654564016" duration="3351000" />
       <workItem from="1463931562080" duration="1048000" />
+      <workItem from="1464073493298" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5430000" />
+    <option name="totallyTimeSpent" value="6029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -179,13 +180,6 @@
     <entry file="file://$PROJECT_DIR$/rially/own_android_connect/get_all_opdrachten.php" />
     <entry file="file://$PROJECT_DIR$/rially/own_android_connect/db_config.php" />
     <entry file="file://$PROJECT_DIR$/rially/own_android_connect/create_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.php" />
   </component>
 </project>
