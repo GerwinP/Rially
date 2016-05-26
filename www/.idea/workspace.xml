@@ -75,7 +75,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -96,6 +95,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -125,11 +125,12 @@
       <workItem from="1463654564016" duration="3351000" />
       <workItem from="1463931562080" duration="1048000" />
       <workItem from="1464073493298" duration="599000" />
+      <workItem from="1464260589597" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6029000" />
+    <option name="totallyTimeSpent" value="6047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

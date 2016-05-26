@@ -41,4 +41,6 @@
     <string name="choosePhotoButton">Kies een foto</string>
     <string name="title_activity_image_upload">ImageUpload</string>
     <string name="theImage">De afbeelding</string>
+    <string name="theImageToUpload">The image to upload</string>
+    <string name="uploadImage">Upload image</string>
 </resources>

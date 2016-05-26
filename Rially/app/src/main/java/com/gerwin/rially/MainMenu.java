@@ -58,7 +58,7 @@ public class MainMenu extends AppCompatActivity {
         }
 
         // The buttons
-        btnTakePicture = (Button) findViewById(R.id.choosePhotoButton);
+        //btnTakePicture = (Button) findViewById(R.id.choosePhotoButton);
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
@@ -83,19 +83,21 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+        /*
         btnTakePicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dispatchTakePictureIntent(view);
             }
         });
+        */
 
         //view opdrachten click event
         btnViewOpdrachten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), show_opdrachten.class);
+                i.putExtra("username", username);
                 startActivity(i);
             }
         });
