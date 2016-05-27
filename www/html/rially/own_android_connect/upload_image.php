@@ -10,12 +10,12 @@ require_once __DIR__ . '/db_config.php';
 
 $response = array();
 
-if (isset($_POST['image'])) {//&& isset($_POST['opdracht_ids']) && isset($_POST['username']) && isset($_POST['modifier_ids'])) {
+if (isset($_POST['image']) && isset($_POST['opdracht_ids']) && isset($_POST['username']) && isset($_POST['modifier_ids'])) {
 
     $image = $_POST['image'];
-    //$username = $_POST['username'];
-    //$opdracht_ids = $_POST['opdracht_ids'];
-    //$modifier_ids = $_POST['modifier_ids'];
+    $username = $_POST['username'];
+    $opdracht_ids = $_POST['opdracht_ids'];
+    $modifier_ids = $_POST['modifier_ids'];
 
     $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
 
@@ -30,8 +30,8 @@ if (isset($_POST['image'])) {//&& isset($_POST['opdracht_ids']) && isset($_POST[
         $response["message"] = "Successfully uploaded image";
 
         echo json_encode($response);
-        /*
-        $result2 = mysqli_query($db, "SELECT * FROM opdracht WHERE image='$image'");
+
+        $result2 = mysqli_query($db, "SELECT * FROM images WHERE image='$image'");
         if (mysqli_num_rows($result2) > 0) {
             while ($row = mysqli_fetch_array($result2)) {
                 $image_id = $row['id'];
@@ -61,11 +61,10 @@ if (isset($_POST['image'])) {//&& isset($_POST['opdracht_ids']) && isset($_POST[
 
         echo json_encode($response);
     }
-*/
-    } else {
-        $response["success"] = 0;
-        $response["message"] = "Required field(s) are missing";
 
-        echo json_encode($response);
-    }
+} else {
+    $response["success"] = 0;
+    $response["message"] = "Required field(s) are missing";
+
+    echo json_encode($response);
 }

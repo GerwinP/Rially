@@ -12,79 +12,75 @@
     tools:context="com.gerwin.rially.MainMenu"
     tools:showIn="@layout/activity_main_menu">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello there"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="321dp" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="40dp">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
 
-        <Button android:id="@+id/choosePhotoButton"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/choosePhotoButton"
-            android:onClick="dispatchTakePictureIntent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/get_video" />
-
-        <Button android:id="@+id/get_video"
+        <TextView android:id="@+id/introTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upload video"
-            android:layout_below="@+id/choosePhotoButton"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:text="@string/introTitleTekst"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView android:id="@+id/introtekstveld"
+            android:layout_below="@+id/introTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/introtekst"/>
 
         <Button android:id="@+id/btnViewOpdrachten"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/bekijk_opdrachten"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <Button android:id="@+id/btnNewOpdracht"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/voeg_opdracht_toe"
-            android:visibility="gone"
-            android:layout_below="@+id/btnViewOpdrachten"
-            android:layout_alignLeft="@+id/btnViewOpdrachten"
-            android:layout_alignStart="@+id/btnViewOpdrachten"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_below="@+id/introtekstveld"
+            android:text="@string/bekijk_opdrachten"/>
 
         <Button android:id="@+id/btnRegels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regels"
-            android:layout_below="@+id/get_video"
-            android:layout_alignParentLeft="true"
+            android:text="@string/regelknop"
+            android:layout_below="@+id/btnViewOpdrachten" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/choosePhotoButton"
-            android:layout_alignEnd="@+id/choosePhotoButton" />
+            android:visibility="gone"
+            android:id="@+id/adminLayout">
 
-        <Button android:id="@+id/createUserButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create user"
-            android:layout_below="@+id/btnNewOpdracht"
-            android:layout_alignLeft="@+id/btnNewOpdracht"
-            android:layout_alignStart="@+id/btnNewOpdracht"
-            android:visibility="gone"/>
+            <TextView android:id="@+id/adminstufftext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/adminstuff"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/colorPrimaryDark"/>
 
-        <ImageView android:id="@+id/imageTestView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnRegels"/>
+            <Button android:id="@+id/createUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/maakgebruiker"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/adminstufftext"/>
+
+            <Button android:id="@+id/btnNewOpdracht"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/createopdracht"
+                    android:layout_below="@+id/createUserButton"
+                    android:visibility="visible"
+                    android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+
+
     </RelativeLayout>
 
 

@@ -25,18 +25,16 @@ import java.util.Date;
 import android.Manifest;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class MainMenu extends AppCompatActivity {
 
-    static final int REQUEST_TAKE_PHOTO = 1;
-    String mCurrentPhotoPath;
     Button btnViewOpdrachten;
     Button btnNewOpdracht;
-    Button btnTakePicture;
     Button btnRegels;
     Button createUser;
-    Button btnChoosePhoto;
     ImageView imageTestView;
+    private RelativeLayout adminLayout;
     private String username = "";
     private boolean isAdmin = false;
     private static final int SELECT_PICTURE = 100;
@@ -48,7 +46,6 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         //Get the values from the login screen
         Bundle extras = getIntent().getExtras();
@@ -58,13 +55,11 @@ public class MainMenu extends AppCompatActivity {
         }
 
         // The buttons
-        //btnTakePicture = (Button) findViewById(R.id.choosePhotoButton);
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
-        btnChoosePhoto = (Button) findViewById(R.id.choosePhotoButton);
         createUser = (Button) findViewById(R.id.createUserButton);
-        imageTestView = (ImageView) findViewById(R.id.imageTestView);
+        adminLayout = (RelativeLayout) findViewById(R.id.adminLayout);
 
         enableButtons(isAdmin);
 
@@ -83,14 +78,6 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        /*
-        btnTakePicture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dispatchTakePictureIntent(view);
-            }
-        });
-        */
 
         //view opdrachten click event
         btnViewOpdrachten.setOnClickListener(new View.OnClickListener() {
@@ -109,66 +96,34 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-        btnChoosePhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openImageChooser();
-            }
-        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         MenuItem userItem = (MenuItem) menu.findItem(R.id.action_bar_user_name);
+        MenuItem bugsItem = (MenuItem) menu.findItem(R.id.action_settings);
         userItem.setTitle(username);
         return true;
     }
 
-    public void dispatchTakePictureIntent(View view) {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.action_settings:
+                Intent i = new Intent(getApplicationContext(), BugsAndIssues.class);
+                startActivity(i);
+                return true;
+            default:
+                return super.onOptionsItemSelected(menuItem);
         }
-        /*
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            File photoFile = null;
-            try {
-                photoFile = createImageFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (photoFile != null) {
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(photoFile));
-                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-            }
-        }
-        */
-    }
-
-    private File createImageFile() throws IOException {
-        //Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String imageFileName = "JPEG" + timeStamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(
-                imageFileName,
-                ".jpg",
-                storageDir
-        );
-
-        //Save a file: path for use with ACTION_VIEW() intents
-        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
-        return image;
     }
 
     private void enableButtons(boolean isAdmin) {
         if (isAdmin) {
-            btnNewOpdracht.setVisibility(View.VISIBLE);
-            createUser.setVisibility(View.VISIBLE);
+            //btnNewOpdracht.setVisibility(View.VISIBLE);
+            //createUser.setVisibility(View.VISIBLE);
+            adminLayout.setVisibility(View.VISIBLE);
         }
     }
 

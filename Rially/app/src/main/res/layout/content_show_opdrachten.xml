@@ -16,36 +16,36 @@
     <Button android:id="@+id/buttonChooseImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/theImageText"
-        android:text="@string/choosePhotoButton"/>
-
-    <TextView android:id="@+id/theImageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="?android:textAppearanceLarge"
-        android:text="@string/theImage"/>
+        android:text="@string/choosePhotoButton"
+        android:layout_alignParentStart="true" />
 
     <ImageView android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/theImageText"
         android:contentDescription="@string/theImageToUpload"/>
 
     <ListView android:id="@+id/opdrachtenList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:visibility="gone">
     </ListView>
+
+    <TextView android:id="@+id/noopdrachtentext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:text="@string/noopdrachten"
+        android:visibility="gone"/>
 
     <Button android:id="@+id/uploadImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/opdrachtenList"
-android:text="@string/uploadImage"        />
+        android:text="@string/uploadImage"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:visibility="gone"/>
 
 </RelativeLayout>

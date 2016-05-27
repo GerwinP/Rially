@@ -1,8 +1,10 @@
 package com.gerwin.rially;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.app.SharedElementCallback;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -16,16 +18,21 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
 import android.util.Log;
 import android.util.Pair;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -59,6 +66,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -68,20 +76,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.jar.Manifest;
 
-public class show_opdrachten extends Activity {
+public class show_opdrachten extends AppCompatActivity {
 
     private ArrayAdapter<Opdracht> opdrachtAdapter;
     List<Opdracht> opdrachtenAdapterList;
     private ListView opdrachtList;
     private Button btnChooseImage;
-    private Button selectModifiers;
+    private Button uploadFoto;
     private ImageView imageView;
-    private static final int REQUEST_TAKE_PHOTO = 1;
     private static final int SELECT_PICTURE = 100;
     private static final String TAG = "show_opdrachten";
     private String username = "";
     private Bitmap bitmap;
     private String modifierids = "";
+    private TextView noOpdrachten;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,12 +98,20 @@ public class show_opdrachten extends Activity {
         setContentView(R.layout.activity_show_opdrachten);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadImage();
+            }
+        });
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             username = extras.getString("username");
         }
 
-        opdrachtenList = new ArrayList<HashMap<String, String>>();
+        opdrachtenList = new ArrayList<>();
 
         AsyncTask<String, String, String> task = new LoadAllOpdrachten();
         task.execute();
@@ -105,12 +122,11 @@ public class show_opdrachten extends Activity {
             @Override
             public void onClick(View view) {
                 openImageChooser();
-                btnChooseImage.setVisibility(View.GONE);
             }
         });
-
-        selectModifiers = (Button) findViewById(R.id.uploadImage);
-        selectModifiers.setOnClickListener(new View.OnClickListener() {
+        noOpdrachten = (TextView) findViewById(R.id.noopdrachtentext);
+        uploadFoto = (Button) findViewById(R.id.uploadImage);
+        uploadFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 uploadImage();
@@ -133,16 +149,8 @@ public class show_opdrachten extends Activity {
         });
     }
 
-    public void dispatchTakePictureIntent(View view) {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-        }
-    }
-
-    private int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
-
     private void openImageChooser() {
+        int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -159,9 +167,8 @@ public class show_opdrachten extends Activity {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), SELECT_PICTURE);
     }
 
-    private int scaleFactor = 6;
-
     public void onActivityResult(int requestcode, int resultcode, Intent data) {
+        int scaleFactor = 6;
         if (resultcode == RESULT_OK) {
             if (requestcode == SELECT_PICTURE) {
                 Uri selectedImageUri = data.getData();
@@ -177,37 +184,21 @@ public class show_opdrachten extends Activity {
                     }
                     Log.i(TAG, "Image Path: " + path);
                     imageView.setImageBitmap(bitmap);
+                    btnChooseImage.setVisibility(View.GONE);
+                    opdrachtList.setVisibility(View.VISIBLE);
+                    //uploadFoto.setVisibility(View.VISIBLE);
+                    fab.setVisibility(View.VISIBLE);
                 }
             }
         }
     }
 
-    public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-        return inSampleSize;
-    }
-
     private String url_upload_image = ServerConfig.getUploadImage();
 
-    private int success;
-
     private String KEY_IMAGE = "image";
+    private String KEY_USERNAME = "username";
+    private String KEY_OPDRACHTIDS = "opdracht_ids";
+    private String KEY_MODIFIERIDS = "modifier_ids";
 
     private void uploadImage() {
         //Showing the progress dialog
@@ -218,9 +209,9 @@ public class show_opdrachten extends Activity {
                     public void onResponse(String s) {
                         //Dismissing the progress dialog
                         loading.dismiss();
-                        System.out.print(s);
                         //Showing toast message of the response
-                        Toast.makeText(show_opdrachten.this, s , Toast.LENGTH_LONG).show();
+                        Toast.makeText(show_opdrachten.this, "Afbeelding succesvol geupload" , Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -229,7 +220,7 @@ public class show_opdrachten extends Activity {
                         //Dismissing the progress dialog
                         loading.dismiss();
                         //Showing toast
-                        Toast.makeText(show_opdrachten.this, volleyError.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(show_opdrachten.this, "Er is iets niet goed gegaan", Toast.LENGTH_LONG).show();
                     }
                 }){
             @Override
@@ -238,18 +229,18 @@ public class show_opdrachten extends Activity {
                 String image = getStringImage(bitmap);
 
                 //Creating parameters
-                Map<String,String> params = new Hashtable<String, String>();
+                Map<String,String> params = new Hashtable<>();
 
                 //Adding parameters
                 params.put(KEY_IMAGE, image);
+                params.put(KEY_OPDRACHTIDS, getOpdrachtIDs());
+                params.put(KEY_USERNAME, username);
+                params.put(KEY_MODIFIERIDS, modifierids);
 
                 //returning parameters
                 return params;
             }
         };
-
-
-
         //Creating a Request Queue
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
@@ -279,8 +270,9 @@ public class show_opdrachten extends Activity {
             progressDialog.show();
         }
 
+        boolean setVisibility = false;
+
         protected String doInBackground(String... args) {
-            List<Pair<String, String>> params = new ArrayList<>();
 
             HttpURLConnection connection = null;
             try {
@@ -307,8 +299,7 @@ public class show_opdrachten extends Activity {
                         opdrachtenList.add(map);
                     }
                 } else {
-                    // no products found
-                    // Eventually launch Add new Opdracht actvity
+                    setVisibility = true;
                 }
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
@@ -338,6 +329,9 @@ public class show_opdrachten extends Activity {
                     Opdracht tempOpdracht = new Opdracht(opdrachtString, id);
                     opdrachtenAdapterList.add(tempOpdracht);
                 }
+            }
+            if (setVisibility) {
+                noOpdrachten.setVisibility(View.VISIBLE);
             }
             show_opdrachten.this.opdrachtAdapter = new OpdrachtArrayAdapter(show_opdrachten.this, opdrachtenAdapterList);
             show_opdrachten.this.setItemClickListeners();

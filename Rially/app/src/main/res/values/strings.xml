@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Rially</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Bugs en issues</string>
     <string name="button">Submit</string>
-    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_main_menu">Hoofdmenu</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="bekijk_opdrachten">Bekijk opdrachten</string>
+    <string name="bekijk_opdrachten">Upload foto</string>
     <string name="voeg_opdracht_toe">Voeg opdracht toe</string>
     <string name="title_activity_show_opdrachten">show_opdrachten</string>
-    <string name="title_activity_rules">Rules</string>
+    <string name="title_activity_rules">De Regels</string>
     <string name="regels">
         1. Houd je altijd aan de wet en in het bijzonder aan de verkeersregels, we willen geen ongelukken.\n
         2. Wees sportief!\n
@@ -19,23 +19,32 @@
     </string>
     <string name="lunch_en_borrel">
         - De puzzels zijn zo ontworpen dat jullie alle tijd hebben om opdrachten uit te voeren en te puzzelen. Probeer niet zo snel mogelijk terug te zijn, maar zoveel mogelijk opdrachten te maken, die leveren immers punten op!\n
-        - Lunch: In de puzzelroute verwijst de tweede puzzel naar de lunchlocatie. We staan tussen 12.30 en 14.30 met een lunch op jullie te wachten.\n
-        - Eten en borrel: Rond 18:15 uur zal het eten aangebroken worden, dus probeer tegen die tijd op de universiteit te zijn.
+        - Lunch: In de puzzelroute verwijst de DERDE! puzzel naar de lunchlocatie, waar dit eerdere jaren de tweede was. We staan tussen 12.30 en 14.30 met een lunch op jullie te wachten.\n
+        - Eten en borrel: Rond 19:30 uur zal het eten aangebroken worden, dus probeer tegen die tijd op de universiteit te zijn.
     </string>
     <string name="opdrachten">
         - Het is handig om minstens 1 telefoon te hebben met mobiel internet.\n
-        - Gemaakte opdrachten kun je inleveren via deze app
+        - Foto\'s van opdrachten kun je inleveren via deze app, video\'s zijn niet mogelijk.
     </string>
     <string name="verdere_informatie">
-        Mocht je nog problemen hebben kun je naar 1 van ons bellen.
+        Mocht je nog problemen hebben kun je naar 1 van ons bellen. \n
+        Wij zijn:\n
+        Iris Heerlien, \n
+        Joaz Wolters, \n
+        Ties Bolding, \n
+        Joanne Spijker, \n
+        Thomas Raaijen, \n
+        Gerwin Puttenstein, \n
+        Arnold Averink \n
+        en Kyra de Lange.
     </string>
     <string name="opdrachtenTitle">Opdrachten</string>
     <string name="verdere_informatieTitle">Verdere informatie</string>
-    <string name="title_activity_add_opdracht">AddOpdracht</string>
-    <string name="title_activity_add_user">AddUser</string>
-    <string name="usernameLabel">Username</string>
-    <string name="passwordLabel">Password</string>
-    <string name="addUser">Add user</string>
+    <string name="title_activity_add_opdracht">Voeg opdracht toe</string>
+    <string name="title_activity_add_user">Voeg team toe</string>
+    <string name="usernameLabel">Teamnaam</string>
+    <string name="passwordLabel">Wachtwoord</string>
+    <string name="addUser">Voeg toe</string>
     <string name="wrongpassword">Username/password combination does not exist</string>
     <string name="userisadmin">User is admin</string>
     <string name="choosePhotoButton">Kies een foto</string>
@@ -43,4 +52,20 @@
     <string name="theImage">De afbeelding</string>
     <string name="theImageToUpload">The image to upload</string>
     <string name="uploadImage">Upload image</string>
+    <string name="regelknop">Regels</string>
+    <string name="maakgebruiker">Maak nieuw team</string>
+    <string name="createopdracht">Maak nieuwe opdracht</string>
+    <string name="adminstuff">Hier is wat admin stuff</string>
+    <string name="introtekst">
+        Hoi, leuk dat jullie meedoen aan de Rially. Via deze app kun je foto\'s uploaden met de bijbehorende opdrachten. \n
+        Helaas ondersteund deze app op dit moment nog geen video\'s. Dus mocht je een epische video hebben, laat het ons weten!
+    </string>
+    <string name="noopdrachten">Helaas zijn er geen opdrachten gevonden door een error. \n Is je internet uit?</string>
+    <string name="title_activity_bugs_and_issues">BugsAndIssues</string>
+    <string name="bugsissuestitle">Heb je bugs of issues?</string>
+    <string name="bugsissuestekst">
+        Meldt deze dan aan Gerwin Puttenstein, gerwinputtentein@gmail.com. \n
+        Suggesties zijn natuurlijk ook altijd welkom!
+    </string>
+    <string name="introTitleTekst">Welkom!</string>
 </resources>

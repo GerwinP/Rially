@@ -56,15 +56,6 @@ public class AddOpdracht extends AppCompatActivity {
                 createOpdracht.setClickable(false);
             }
         });
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     private static final String url_create_opdracht = ServerConfig.getCreateOpdracht();
