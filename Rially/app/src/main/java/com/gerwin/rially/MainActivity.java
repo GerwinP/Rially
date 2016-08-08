@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*-Temp: if there is no user in the db, it skips the login check-//
+                Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                startActivity(i);
+                //---*/
                 new LogIn().execute();
             }
         });

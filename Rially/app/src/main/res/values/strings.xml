@@ -68,4 +68,10 @@
         Suggesties zijn natuurlijk ook altijd welkom!
     </string>
     <string name="introTitleTekst">Welkom!</string>
+    <string name="testButton">Test</string>
+    <string name="title_activity_test">testActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="admin">Admin</string>
 </resources>

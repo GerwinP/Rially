@@ -45,6 +45,13 @@
             android:text="@string/regelknop"
             android:layout_below="@+id/btnViewOpdrachten" />
 
+        <Button android:id="@+id/btnTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/testButton"
+            android:layout_below="@+id/btnRegels"
+            />
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
