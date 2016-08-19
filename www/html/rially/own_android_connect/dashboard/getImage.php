@@ -12,7 +12,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($password != "rially2016") {
         echo "<h1>Wrong password</h1>";
     } else {
-        require_once __DIR__ . '/db_config.php';
+        require_once __DIR__ . '/../db_config.php';
 
         $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
 

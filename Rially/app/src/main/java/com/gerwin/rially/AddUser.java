@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -38,6 +39,7 @@ public class AddUser extends AppCompatActivity {
 
     private EditText usernameField;
     private EditText passwordField;
+    private EditText reenterPasswordField;
     private Button addUser;
     private CheckBox isAdminBox;
 
@@ -50,6 +52,7 @@ public class AddUser extends AppCompatActivity {
 
         usernameField = (EditText) findViewById(R.id.createUsername);
         passwordField = (EditText) findViewById(R.id.createPassword);
+        reenterPasswordField = (EditText) findViewById(R.id.reenterPassword);
         addUser = (Button) findViewById(R.id.createUser);
         isAdminBox = (CheckBox) findViewById(R.id.isAdminCheck);
 
@@ -91,42 +94,47 @@ public class AddUser extends AppCompatActivity {
                 isCheckedInt = 1;
             }
 
-            try {
-                params.add(new Pair("username", username));
-                params.add(new Pair("hpassword", hpassword));
-                params.add(new Pair("isAdmin", Integer.toString(isCheckedInt)));
-                URL url = new URL(url_create_user);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
-                connection.setRequestProperty("username", username);
-                connection.setRequestProperty("hpassword", hpassword);
-                connection.setRequestProperty("isAdmin", Integer.toString(isCheckedInt));
+            if (hpassword == null) {
 
-                OutputStream outputpost = new BufferedOutputStream(connection.getOutputStream());
-                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputpost, "UTF-8"));
-                writer.write(Utils.getQuery(params));
-                writer.flush();
-                writer.close();
-                outputpost.close();
-                connection.connect();
-                int response = connection.getResponseCode();
+            } else {
+                try {
+                    params.add(new Pair("username", username));
+                    params.add(new Pair("hpassword", hpassword));
+                    params.add(new Pair("isAdmin", Integer.toString(isCheckedInt)));
+                    URL url = new URL(url_create_user);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("POST");
+                    connection.setRequestProperty("username", username);
+                    connection.setRequestProperty("hpassword", hpassword);
+                    connection.setRequestProperty("isAdmin", Integer.toString(isCheckedInt));
 
-                InputStream inputStream = connection.getInputStream();
-                String contentAsString = Utils.readIt(inputStream);
-                JSONObject json = new JSONObject(contentAsString);
-                int success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
-                if (success == 1) {
-                    //Intent i = new Intent(getApplicationContext(), MainMenu.class);
-                    //startActivity(i);
-                    finish();
-                }
-            } catch (IOException | JSONException e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
+                    OutputStream outputpost = new BufferedOutputStream(connection.getOutputStream());
+                    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputpost, "UTF-8"));
+                    writer.write(Utils.getQuery(params));
+                    writer.flush();
+                    writer.close();
+                    outputpost.close();
+                    connection.connect();
+                    int response = connection.getResponseCode();
+
+                    InputStream inputStream = connection.getInputStream();
+                    String contentAsString = Utils.readIt(inputStream);
+                    JSONObject json = new JSONObject(contentAsString);
+                    int success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
+                    if (success == 1) {
+                        //Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                        //startActivity(i);
+                        finish();
+                    }
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                } finally {
+                    if (connection != null) {
+                        connection.disconnect();
+                    }
                 }
             }
+
             return null;
         }
 
@@ -146,10 +154,25 @@ public class AddUser extends AppCompatActivity {
             for (int i = 0; i < byteDat.length; i++) {
                 sb.append(Integer.toString((byteDat[i] & 0xff) + 0x100, 16).substring(1));
             }
-            return sb.toString();
+
+            MessageDigest mdR = MessageDigest.getInstance("SHA-256");
+            md.update(reenterPasswordField.getText().toString().getBytes());
+
+            byte byteDatR[] = md.digest();
+
+            //convert the byte to hex format
+            StringBuffer sbR = new StringBuffer();
+            for (int i = 0; i < byteDatR.length; i++) {
+                sbR.append(Integer.toString((byteDatR[i] & 0xff)+0x100, 16).substring(1));
+            }
+            if (sb.toString().equals(sbR.toString())) {
+                return sb.toString();
+            } else {
+                return null;
+            }
         } catch (NoSuchAlgorithmException e) {
 
         }
-        return "";
+        return null;
     }
 }
