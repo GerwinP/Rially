@@ -14,6 +14,11 @@ if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
 
 require_once __DIR__ . '/../../db_config.php';
 
+$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+if ($db->connect_error) {
+    die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
+}
 
 ?>
 
@@ -120,6 +125,20 @@ require_once __DIR__ . '/../../db_config.php';
                     </li>
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <?php
+                                $result = mysqli_query($db, "SELECT uid,username FROM users");
+
+                                while ($row = mysqli_fetch_array($result)) {
+                                    $username = $row["username"];
+                                    $uid = $row["uid"];
+                                    echo "<li> <a href='viewimages.php?uid=$uid'>$username</a></li>";
+                                }
+                            ?>
+                        </ul>
                     </li>
                 </ul>
             </div>
