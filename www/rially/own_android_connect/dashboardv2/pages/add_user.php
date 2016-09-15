@@ -8,8 +8,16 @@
 
 session_start();
 
+require_once __DIR__ . '/../../db_config.php';
+
 if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
     header("location: login.php");
+}
+
+$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+if ($db->connect_error) {
+    die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
@@ -19,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
 
     $response = array();
 
-    require_once __DIR__ . '/../../db_config.php';
+
 
     $username = $_POST['Username'];
     $hpassword = hash("sha256", $_POST['Password']);
@@ -28,11 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
 
     if ($username != "" && $_POST['Password'] != "") {
         if ($hpassword == $hRpassword) {
-            $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
-
-            if ($db->connect_error) {
-                die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
-            }
 
             //Check if the username already exists
             $check = mysqli_query($db, "SELECT * FROM users WHERE username = '$username'");
@@ -168,6 +171,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
                     </li>
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <?php
+                            $result = mysqli_query($db, "SELECT uid,username FROM users");
+
+                            while ($row = mysqli_fetch_array($result)) {
+                                $username = $row["username"];
+                                $uid = $row["uid"];
+                                echo "<li> <a href='viewimages.php?username=$username'>$username</a></li>";
+                            }
+                            ?>
+                        </ul>
                     </li>
                 </ul>
             </div>

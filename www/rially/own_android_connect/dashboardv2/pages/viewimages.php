@@ -20,7 +20,7 @@ if ($db->connect_error) {
     die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
 }
 
-$uid = $_GET['uid'];
+$username = $_GET['username'];
 
 ?>
 
@@ -45,6 +45,9 @@ $uid = $_GET['uid'];
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Personal CSS -->
+    <link href="../css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -123,6 +126,20 @@ $uid = $_GET['uid'];
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
                     </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <?php
+                            $result = mysqli_query($db, "SELECT uid,username FROM users");
+
+                            while ($row = mysqli_fetch_array($result)) {
+                                $tempusername = $row["username"];
+                                $uid = $row["uid"];
+                                echo "<li> <a href='viewimages.php?username=$tempusername'>$tempusername</a></li>";
+                            }
+                            ?>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
@@ -133,20 +150,39 @@ $uid = $_GET['uid'];
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Blank</h1>
+                <?php
+                echo "<h1 class='page-header'>$username</h1>"
+                ?>
             </div>
             <!-- /.col-lg-12 -->
         </div>
         <div class = "row">
             <div class="col-lg-12">
-                <?php
-                $result = mysqli_query($db, "SELECT username, admin FROM users WHERE uid = $uid");
 
-                $row = mysqli_fetch_array($result);
+                <ul>
+                    <?php
 
-                echo ("Username = " . $row['username'] . " and is admin is : " . $row["admin"]);
+                    $result = mysqli_query($db, "SELECT * FROM image_teams WHERE username = '$username'");
 
-                ?>
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_array($result)) {
+                            $image_id = $row['image_id'];
+                            $opdracht_ids = $row['opdracht_ids'];
+                            $modifier_ids = $row['modifier_ids'];
+
+                            $result_image = mysqli_query($db, "SELECT * FROM images WHERE id = '$image_id'");
+                            if (mysqli_num_rows($result_image) > 0) {
+                                while($row = mysqli_fetch_array($result_image)) {
+                                    $image = base64_decode($row['image']);
+                                    echo '<li><img class="team_image" src = "data:image/jpeg;base64,' . base64_encode($image) . '"/></li>';
+                                }
+                            }
+                        }
+                    }
+
+
+                    ?>
+                </ul>
             </div>
         </div>
 

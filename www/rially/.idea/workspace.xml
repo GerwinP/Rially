@@ -21,16 +21,16 @@
     <favorites_list name="rially" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.66129994">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="137" column="80" selection-start-line="137" selection-start-column="80" selection-end-line="137" selection-end-column="80" />
+                <state relative-caret-position="425">
+                  <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="141" selection-end-column="25" />
                   <folding>
-                    <marker date="1473893096618" expanded="true" signature="4913:4943" placeholder="SELECT usern... users" />
+                    <marker date="1473948024653" expanded="true" signature="4913:4943" placeholder="SELECT usern... users" />
                   </folding>
                 </state>
               </provider>
@@ -39,11 +39,25 @@
           <file leaf-file-name="viewimages.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/viewimages.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1785">
-                  <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+                <state relative-caret-position="442">
+                  <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
                   <folding>
-                    <marker date="1473893474112" expanded="true" signature="4993:5039" placeholder="SELECT usern... users" />
+                    <marker date="1473954409964" expanded="true" signature="4888:4918" placeholder="SELECT uid,u... users" />
+                    <marker date="1473954409964" expanded="true" signature="5915:5959" placeholder="SELECT * FRO... image_teams" />
+                    <marker date="1473954409964" expanded="true" signature="5915:5969" placeholder="SELECT * FRO... image_teams" />
+                    <marker date="1473954409964" expanded="true" signature="6353:6386" placeholder="SELECT * FRO... images" />
+                    <marker date="1473954409964" expanded="true" signature="6353:6396" placeholder="SELECT * FRO... images" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/css/styles.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -67,7 +81,7 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="248">
+                <state relative-caret-position="4063">
                   <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
                   <folding />
                 </state>
@@ -77,11 +91,12 @@
           <file leaf-file-name="add_modifier.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_modifier.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="612">
-                  <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+                <state relative-caret-position="102">
+                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding>
-                    <marker date="1473776630268" expanded="true" signature="665:717" placeholder="SELECT * FRO... modifiers" />
-                    <marker date="1473776630268" expanded="true" signature="808:859" placeholder="INSERT INTO modifiers... " />
+                    <marker date="1473954295349" expanded="true" signature="632:684" placeholder="SELECT * FRO... modifiers" />
+                    <marker date="1473954295349" expanded="true" signature="775:826" placeholder="INSERT INTO modifiers... " />
+                    <marker date="1473954295349" expanded="true" signature="5879:5909" placeholder="SELECT uid,u... users" />
                   </folding>
                 </state>
               </provider>
@@ -90,16 +105,31 @@
           <file leaf-file-name="add_user.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_user.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" column="88" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="88" />
+                <state relative-caret-position="578">
+                  <caret line="187" column="25" selection-start-line="174" selection-start-column="20" selection-end-line="187" selection-end-column="25" />
                   <folding>
                     <element signature="e#6#85#0#PHP" expanded="true" />
-                    <marker date="1473776630284" expanded="true" signature="1070:1118" placeholder="SELECT * FRO... users" />
-                    <marker date="1473776630284" expanded="true" signature="1216:1306" placeholder="INSERT INTO users... " />
-                    <marker date="1473776630284" expanded="true" signature="8142:8394" placeholder="..." />
-                    <marker date="1473776630284" expanded="true" signature="8524:8750" placeholder="..." />
-                    <marker date="1473776630284" expanded="true" signature="8881:9105" placeholder="..." />
-                    <marker date="1473776630284" expanded="true" signature="9236:9463" placeholder="..." />
+                    <marker date="1473954303421" expanded="true" signature="1021:1069" placeholder="SELECT * FRO... users" />
+                    <marker date="1473954303421" expanded="true" signature="1167:1257" placeholder="INSERT INTO users... " />
+                    <marker date="1473954303421" expanded="true" signature="6432:6462" placeholder="SELECT uid,u... users" />
+                    <marker date="1473954303421" expanded="true" signature="8830:9082" placeholder="..." />
+                    <marker date="1473954303421" expanded="true" signature="9212:9438" placeholder="..." />
+                    <marker date="1473954303421" expanded="true" signature="9569:9793" placeholder="..." />
+                    <marker date="1473954303421" expanded="true" signature="9924:10151" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="add_assignment.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_assignment.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+                  <folding>
+                    <marker date="1473954295303" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+                    <marker date="1473954295303" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+                    <marker date="1473954295303" expanded="true" signature="5899:5929" placeholder="SELECT uid,u... users" />
                   </folding>
                 </state>
               </provider>
@@ -108,9 +138,24 @@
           <file leaf-file-name="blank.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/blank.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="952">
-                  <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
-                  <folding />
+                <state relative-caret-position="824">
+                  <caret line="128" column="25" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
+                  <folding>
+                    <marker date="1473954146486" expanded="true" signature="4553:4583" placeholder="SELECT uid,u... users" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="getImage.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/own_android_connect/dashboard/getImage.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+                  <folding>
+                    <marker date="1473776630108" expanded="true" signature="609:661" placeholder="SELECT * FRO... image_teams" />
+                    <marker date="1473776630108" expanded="true" signature="1276:1317" placeholder="SELECT * FRO... images" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -150,11 +195,12 @@
         <option value="$PROJECT_DIR$/own_android_connect/dashboard/getImage.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/logout.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/login.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/css/styles.css" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/blank.php" />
-        <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_user.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_assignment.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_modifier.php" />
-        <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.php" />
+        <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_user.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/viewimages.php" />
       </list>
     </option>
@@ -200,7 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,17 +317,40 @@
               <option name="myItemId" value="rially" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="own_android_connect" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboardv2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="git&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/.gitignore&#10;add&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/pages/add_modifier.php&#10;add_ass&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/pages/add_assignment.php&#10;user&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/create_user.php&#10;get&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/get_all_opdrachten.php" />
+    <property name="SearchEverywhereHistoryKey" value="getIma&#9;FILE&#9;file://C:/Development/Rially/Rially_Android/www/rially/own_android_connect/dashboard/getImage.php&#10;git&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/.gitignore&#10;add&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/pages/add_modifier.php&#10;add_ass&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/dashboardv2/pages/add_assignment.php&#10;user&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/create_user.php&#10;get&#9;FILE&#9;file:///home/gerwin/Development/Rially-19-08-16/www/html/rially/own_android_connect/get_all_opdrachten.php" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -348,11 +416,13 @@
       <workItem from="1471773499412" duration="26017000" />
       <workItem from="1473780874919" duration="2519000" />
       <workItem from="1473891753930" duration="1760000" />
+      <workItem from="1473946222406" duration="2907000" />
+      <workItem from="1473952667748" duration="2214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57205000" />
+    <option name="totallyTimeSpent" value="62326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -398,7 +468,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android_connect/db_config.php" />
     <entry file="file://$PROJECT_DIR$/android_connect/db_connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -606,19 +675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboard/getImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,17 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="422" column="28" selection-start-line="422" selection-start-column="28" selection-end-line="425" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_assignment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="37" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,7 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,26 +735,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="80" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
+        <state relative-caret-position="4063">
           <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_modifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding>
-            <marker date="1473776630268" expanded="true" signature="665:717" placeholder="SELECT * FRO... modifiers" />
-            <marker date="1473776630268" expanded="true" signature="808:859" placeholder="INSERT INTO modifiers... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,46 +763,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboard/getImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <marker date="1473776630108" expanded="true" signature="609:661" placeholder="SELECT * FRO... image_teams" />
+            <marker date="1473776630108" expanded="true" signature="1276:1317" placeholder="SELECT * FRO... images" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="137" column="80" selection-start-line="137" selection-start-column="80" selection-end-line="137" selection-end-column="80" />
+        <state relative-caret-position="425">
+          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="141" selection-end-column="25" />
           <folding>
-            <marker date="1473893096618" expanded="true" signature="4913:4943" placeholder="SELECT usern... users" />
+            <marker date="1473948024653" expanded="true" signature="4913:4943" placeholder="SELECT usern... users" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/blank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="824">
+          <caret line="128" column="25" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
+          <folding>
+            <marker date="1473954146486" expanded="true" signature="4553:4583" placeholder="SELECT uid,u... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding>
+            <marker date="1473954295303" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+            <marker date="1473954295303" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+            <marker date="1473954295303" expanded="true" signature="5899:5929" placeholder="SELECT uid,u... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1473954295349" expanded="true" signature="632:684" placeholder="SELECT * FRO... modifiers" />
+            <marker date="1473954295349" expanded="true" signature="775:826" placeholder="INSERT INTO modifiers... " />
+            <marker date="1473954295349" expanded="true" signature="5879:5909" placeholder="SELECT uid,u... users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="88" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="88" />
+        <state relative-caret-position="578">
+          <caret line="187" column="25" selection-start-line="174" selection-start-column="20" selection-end-line="187" selection-end-column="25" />
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
-            <marker date="1473776630284" expanded="true" signature="1070:1118" placeholder="SELECT * FRO... users" />
-            <marker date="1473776630284" expanded="true" signature="1216:1306" placeholder="INSERT INTO users... " />
-            <marker date="1473776630284" expanded="true" signature="8142:8394" placeholder="..." />
-            <marker date="1473776630284" expanded="true" signature="8524:8750" placeholder="..." />
-            <marker date="1473776630284" expanded="true" signature="8881:9105" placeholder="..." />
-            <marker date="1473776630284" expanded="true" signature="9236:9463" placeholder="..." />
+            <marker date="1473954303421" expanded="true" signature="1021:1069" placeholder="SELECT * FRO... users" />
+            <marker date="1473954303421" expanded="true" signature="1167:1257" placeholder="INSERT INTO users... " />
+            <marker date="1473954303421" expanded="true" signature="6432:6462" placeholder="SELECT uid,u... users" />
+            <marker date="1473954303421" expanded="true" signature="8830:9082" placeholder="..." />
+            <marker date="1473954303421" expanded="true" signature="9212:9438" placeholder="..." />
+            <marker date="1473954303421" expanded="true" signature="9569:9793" placeholder="..." />
+            <marker date="1473954303421" expanded="true" signature="9924:10151" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/dashboardv2/pages/viewimages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="442">
+          <caret line="136" column="51" selection-start-line="136" selection-start-column="51" selection-end-line="136" selection-end-column="51" />
           <folding>
-            <marker date="1473893474112" expanded="true" signature="4993:5039" placeholder="SELECT usern... users" />
+            <marker date="1473954409964" expanded="true" signature="4888:4918" placeholder="SELECT uid,u... users" />
+            <marker date="1473954409964" expanded="true" signature="5915:5959" placeholder="SELECT * FRO... image_teams" />
+            <marker date="1473954409964" expanded="true" signature="5915:5969" placeholder="SELECT * FRO... image_teams" />
+            <marker date="1473954409964" expanded="true" signature="6353:6386" placeholder="SELECT * FRO... images" />
+            <marker date="1473954409964" expanded="true" signature="6353:6396" placeholder="SELECT * FRO... images" />
           </folding>
         </state>
       </provider>

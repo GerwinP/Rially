@@ -135,7 +135,7 @@ if ($db->connect_error) {
                                 while ($row = mysqli_fetch_array($result)) {
                                     $username = $row["username"];
                                     $uid = $row["uid"];
-                                    echo "<li> <a href='viewimages.php?uid=$uid'>$username</a></li>";
+                                    echo "<li> <a href='viewimages.php?username=$username'>$username</a></li>";
                                 }
                             ?>
                         </ul>

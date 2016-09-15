@@ -113,6 +113,20 @@ if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
                     </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <?php
+                            $result = mysqli_query($db, "SELECT uid,username FROM users");
+
+                            while ($row = mysqli_fetch_array($result)) {
+                                $username = $row["username"];
+                                $uid = $row["uid"];
+                                echo "<li> <a href='viewimages.php?username=$username'>$username</a></li>";
+                            }
+                            ?>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->
