@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Rially</string>
     <string name="action_settings">Bugs en issues</string>
-    <string name="button">Submit</string>
+    <string name="button">Log in</string>
     <string name="title_activity_main_menu">Hoofdmenu</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
