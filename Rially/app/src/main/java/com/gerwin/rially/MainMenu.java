@@ -65,6 +65,9 @@ public class MainMenu extends AppCompatActivity {
         createUser = (Button) findViewById(R.id.createUserButton);
         adminLayout = (RelativeLayout) findViewById(R.id.adminLayout);
 
+        // If there is no admin, uncomment
+        //isAdmin = true;
+
         enableButtons(isAdmin);
 
         btnRegels.setOnClickListener(new View.OnClickListener() {

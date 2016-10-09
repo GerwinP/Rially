@@ -210,6 +210,7 @@ public class show_opdrachten extends AppCompatActivity {
                         //Dismissing the progress dialog
                         loading.dismiss();
                         //Showing toast message of the response
+                        System.out.println("RESPONSE: " + s);
                         Toast.makeText(show_opdrachten.this, "Afbeelding succesvol geupload" , Toast.LENGTH_LONG).show();
                         finish();
                     }

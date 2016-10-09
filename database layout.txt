@@ -14,7 +14,7 @@ modifiers
     
 images
     - id                auto-incr
-    - image             blob
+    - image             longblob
 
 image_teams
     - id                auto-incr

@@ -1,0 +1,24 @@
+users:
+    - id                auto-incr
+    - username          varchar
+    - password          varchar
+    - admin             bool
+ 
+opdrachten
+    - id                auto-incr
+    - opdracht          varchar
+    
+modifiers
+    - id                auto-incr
+    - modifier          varchar
+    
+images
+    - id                auto-incr
+    - image             blob
+
+image_teams
+    - id                auto-incr
+    - image_id          int
+    - username          varchar
+    - opdracht_ids      varchar
+    - modifier_ids      varchar
