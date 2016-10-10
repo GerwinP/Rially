@@ -113,6 +113,7 @@ if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
                     </li>
+                        <a href="remove_user.php"><i class="fa fa-list fa-fw"></i> Remove User/Team</a>
                     <li>
                         <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

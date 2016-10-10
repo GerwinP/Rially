@@ -17,10 +17,10 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:hint="@string/username"
-        tools:background="#fff"
+        android:background="#fff"
         android:layout_above="@+id/password"
         android:layout_alignStart="@+id/password"
-        tools:drawableLeft="@drawable/ic_account_box_black_24dp"
+        android:drawableLeft="@drawable/ic_account_box_black_24dp"
         android:drawablePadding="5dp"/>
 
     <EditText android:id="@+id/password"
@@ -30,10 +30,10 @@
         android:inputType="textPassword"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="23dp"
-        tools:background="#fff"
+        android:background="#fff"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
         android:layout_above="@+id/wrongpasswordtext"
         android:layout_centerHorizontal="true"
-        tools:drawableLeft="@drawable/ic_lock_black_24dp"
         android:drawablePadding="5dp"/>
 
     <TextView android:id="@+id/riallyText"
@@ -57,24 +57,34 @@
         android:layout_above="@+id/username"
         android:layout_alignEnd="@+id/username" />
 
-    <Button
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        android:id="@+id/submit"
-        android:background="@drawable/custom_button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="221dp" />
-
     <TextView android:id="@+id/wrongpasswordtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
         android:textColor="@color/colorRed"
         android:text="@string/wrongpassword"
-        android:layout_above="@+id/submit"
+        android:layout_alignTop="@+id/submit"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp" />
+        android:layout_marginTop="54dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:textColor="#fff"
+        android:buttonTint="#fff"
+        android:id="@+id/checkBox2"
+        android:layout_below="@+id/wrongpasswordtext"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        android:id="@+id/submit"
+        android:background="@drawable/custom_button"
+        android:layout_marginBottom="204dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -111,11 +111,14 @@ public class LoginActivity extends AppCompatActivity {
                 String contentAsString = Utils.readIt(inputStream);
                 JSONObject json = new JSONObject(contentAsString);
                 success = (int)json.get(JSONTags.TAG_SUCCESS.tag());
-                int isAdminint = Integer.parseInt((String)json.get(JSONTags.TAG_ADMIN.tag()));
-                //System.out.println("The isAdmin is: " + isAdminint.toString());
-                if (isAdminint != 0) {
-                    isAdmin = true;
+                if (success == 1) {
+                    int isAdminint = Integer.parseInt((String)json.get(JSONTags.TAG_ADMIN.tag()));
+                    //System.out.println("The isAdmin is: " + isAdminint.toString());
+                    if (isAdminint != 0) {
+                        isAdmin = true;
+                    }
                 }
+
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             } finally {

@@ -12,15 +12,7 @@
     tools:context="com.gerwin.rially.MainMenu"
     tools:showIn="@layout/activity_main_menu">
 
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true">
-
-        <TextView android:id="@+id/introTitle"
+    <TextView android:id="@+id/introTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/introTitleTekst"
@@ -33,63 +25,61 @@
             android:layout_height="wrap_content"
             android:text="@string/introtekst"/>
 
-        <Button android:id="@+id/btnViewOpdrachten"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/introtekstveld"
-            android:text="@string/bekijk_opdrachten"/>
 
-        <Button android:id="@+id/btnRegels"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/regelknop"
-            android:layout_below="@+id/btnViewOpdrachten" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/adminLayout"
+        android:layout_below="@+id/btnViewOpdrachten"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="90dp">
 
-        <Button android:id="@+id/btnTest"
+        <TextView android:id="@+id/adminstufftext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/testButton"
-            android:layout_below="@+id/btnRegels"
-            />
+            android:layout_centerHorizontal="true"
+            android:text="@string/adminstuff"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"/>
 
-        <RelativeLayout
+        <Button android:id="@+id/createUserButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:visibility="gone"
-            android:id="@+id/adminLayout">
+            android:text="@string/maakgebruiker"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/adminstufftext"/>
 
-            <TextView android:id="@+id/adminstufftext"
-                android:layout_width="wrap_content"
+        <Button android:id="@+id/btnNewOpdracht"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/adminstuff"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="@color/colorPrimaryDark"/>
-
-            <Button android:id="@+id/createUserButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/maakgebruiker"
+                android:text="@string/createopdracht"
+                android:layout_below="@+id/createUserButton"
                 android:visibility="visible"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/adminstufftext"/>
-
-            <Button android:id="@+id/btnNewOpdracht"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="@string/createopdracht"
-                    android:layout_below="@+id/createUserButton"
-                    android:visibility="visible"
-                    android:layout_centerHorizontal="true" />
-        </RelativeLayout>
-
-
-
-
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introtekstveld"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp">
+
+
+        <Button android:id="@+id/btnViewOpdrachten"
+            android:layout_height="72dp"
+            android:layout_width="72dp"
+            android:background="@drawable/ic_add_a_photo_black_48dp" />
+
+        <Button android:id="@+id/btnRegels"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/ic_assignment_black_48dp"
+            android:layout_marginStart="12dp"/>
+
+    </GridLayout>
 
 
 </RelativeLayout>

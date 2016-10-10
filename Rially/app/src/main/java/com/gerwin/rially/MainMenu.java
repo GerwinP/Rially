@@ -35,7 +35,6 @@ public class MainMenu extends AppCompatActivity {
     Button btnNewOpdracht;
     Button btnRegels;
     Button createUser;
-    private Button btnTest;
     ImageView imageTestView;
     private RelativeLayout adminLayout;
     private String username = "";
@@ -61,7 +60,6 @@ public class MainMenu extends AppCompatActivity {
         btnViewOpdrachten = (Button) findViewById(R.id.btnViewOpdrachten);
         btnNewOpdracht = (Button) findViewById(R.id.btnNewOpdracht);
         btnRegels = (Button) findViewById(R.id.btnRegels);
-        btnTest = (Button) findViewById(R.id.btnTest);
         createUser = (Button) findViewById(R.id.createUserButton);
         adminLayout = (RelativeLayout) findViewById(R.id.adminLayout);
 
@@ -100,14 +98,6 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), AddUser.class);
-                startActivity(i);
-            }
-        });
-
-        btnTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), testActivity.class);
                 startActivity(i);
             }
         });

@@ -5,11 +5,11 @@
         <shape>
             <gradient
                 android:startColor="@color/colorAccent"
-                android:endColor="@color/colorGreenDark"
+                android:endColor="@color/colorAccent"
                 android:angle="270"/>
             <stroke
-                android:width="3dp"
-                android:color="@color/colorGreenLight"/>
+                android:width="1dp"
+                android:color="@color/colorGreenDark"/>
             <corners
                 android:radius="3dp"/>
             <padding

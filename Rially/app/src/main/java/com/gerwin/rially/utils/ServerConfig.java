@@ -5,28 +5,21 @@ package com.gerwin.rially.utils;
  */
 public class ServerConfig {
 
-    private static final String serveradress = "130.89.161.72";
+    private static final String serveraddress = "130.89.161.72";
     private static final String thuisAddress = "192.168.2.10";
     private static final String laptopAddress = "192.168.2.15";
-    private static final String localadress = "10.0.2.2";
+    private static final String localaddress = "10.0.2.2";
     private static final String local = "127.0.0.1";
-    private static final String HTTP = "http://";
-    private static final String LINK = "/rially/own_android_connect/";
+    private static final String[] addresses = {serveraddress, thuisAddress, laptopAddress, localaddress, local};
+    private static final int x = 0;
 
+    public static String getGetAllOpdrachten () { return "http://" + addresses[x] + "/rially/android/get_all_opdrachten.php"; }
 
-    private static final String getAllOpdrachten = "http://" + laptopAddress + "/rially/own_android_connect/get_all_opdrachten.php";
-    private static final String createOpdracht = "http://" + laptopAddress + "/rially/own_android_connect/create_opdracht.php";
-    private static final String logIn = "http://" + laptopAddress + "/rially/own_android_connect/login.php";
-    private static final String addUser = "http://" + laptopAddress + "/rially/own_android_connect/create_user.php";
-    private static final String uploadImage = "http://" + laptopAddress + "/rially/own_android_connect/upload_image.php";
+    public static String getCreateOpdracht () { return "http://" + addresses[x] + "/rially/android/create_opdracht.php"; }
 
-    public static String getGetAllOpdrachten () { return getAllOpdrachten; }
+    public static String getLogIn () { return "http://" + addresses[x] + "/rially/android/login.php"; }
 
-    public static String getCreateOpdracht () { return createOpdracht; }
+    public static String getAddUser () { return "http://" + addresses[x] + "/rially/android/create_user.php"; }
 
-    public static String getLogIn () { return logIn; }
-
-    public static String getAddUser () { return addUser; }
-
-    public static String getUploadImage () { return uploadImage; }
+    public static String getUploadImage () { return "http://" + addresses[x] + "/rially/android/upload_image.php"; }
 }
