@@ -9,40 +9,72 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.gerwin.rially.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.gerwin.rially.LoginActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/colorPrimary">
 
     <EditText android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:hint="@string/username"
+        tools:background="#fff"
         android:layout_above="@+id/password"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/password"
+        tools:drawableLeft="@drawable/ic_account_box_black_24dp"
+        android:drawablePadding="5dp"/>
 
     <EditText android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:layout_above="@+id/submit"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="23dp"
+        tools:background="#fff"
+        android:layout_above="@+id/wrongpasswordtext"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="77dp" />
+        tools:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="5dp"/>
+
+    <TextView android:id="@+id/riallyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="Rially"
+        android:textSize="36sp"
+        android:layout_alignBaseline="@+id/loginText"
+        android:layout_alignBottom="@+id/loginText"
+        android:layout_alignStart="@+id/username" />
+
+    <TextView android:id="@+id/loginText"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:text="Log in"
+        android:textSize="36sp"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/username"
+        android:layout_alignEnd="@+id/username" />
+
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        android:id="@+id/submit"
+        android:background="@drawable/custom_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="221dp" />
 
     <TextView android:id="@+id/wrongpasswordtext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textColor="@color/colorRed"
+        android:text="@string/wrongpassword"
         android:layout_above="@+id/submit"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:text="@string/wrongpassword"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        android:id="@+id/submit"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="11dp" />
 
 </RelativeLayout>
