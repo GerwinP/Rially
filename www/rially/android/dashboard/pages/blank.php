@@ -12,6 +12,14 @@ if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
     header("location: login.php");
 }
 
+require_once __DIR__ . '/../../db_config.php';
+
+$db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
+
+if ($db->connect_error) {
+    die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -113,7 +121,15 @@ if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
                     <li>
                         <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
                     </li>
-                        <a href="remove_user.php"><i class="fa fa-list fa-fw"></i> Remove User/Team</a>
+                    <li>
+                        <a href="remove_user.php"><i class="glyphicon glyphicon-remove fa-fw"></i> Remove User/Team</a>
+                    </li>
+                    <li>
+                        <a href="remove_assignment.php"><i class="glyphicon glyphicon-remove fa-fw"></i>Remove Assignment(s)</a>
+                    </li>
+                    <li>
+                        <a href="remove_modifier.php"><i class="glyphicon glyphicon-remove fa-fw"></i>Remove Modifier(s)</a>
+                    </li>
                     <li>
                         <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">

@@ -22,8 +22,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="db_config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/android/db_config.php">
+      <file leaf-file-name="blank.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/blank.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <folding>
+                <marker date="1476902552729" expanded="true" signature="5303:5333" placeholder="SELECT uid,u... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <marker date="1473776630394" expanded="true" signature="462:508" placeholder="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/add_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding>
+                <marker date="1476993019083" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
+                <marker date="1476993019083" expanded="true" signature="1234:1324" placeholder="INSERT INTO users... " />
+                <marker date="1476993019083" expanded="true" signature="6499:6529" placeholder="SELECT uid,u... users" />
+                <marker date="1476993019083" expanded="true" signature="8897:9149" placeholder="..." />
+                <marker date="1476993019083" expanded="true" signature="9279:9505" placeholder="..." />
+                <marker date="1476993019083" expanded="true" signature="9636:9860" placeholder="..." />
+                <marker date="1476993019083" expanded="true" signature="9991:10218" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logout.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/logout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -32,14 +74,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blank.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/blank.php">
+      <file leaf-file-name="icons.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/template_pages/icons.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="115" column="99" selection-start-line="115" selection-start-column="99" selection-end-line="115" selection-end-column="99" />
-              <folding>
-                <marker date="1476114828636" expanded="true" signature="4657:4687" placeholder="SELECT uid,u... users" />
-              </folding>
+            <state relative-caret-position="561">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,12 +94,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="add_assignment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/android/dashboard/pages/add_assignment.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <marker date="1473954295303" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+                <marker date="1473954295303" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+                <marker date="1473954295303" expanded="true" signature="5899:5929" placeholder="SELECT uid,u... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="remove_assignment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android/dashboard/pages/remove_assignment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1283">
+              <caret line="171" column="100" selection-start-line="171" selection-start-column="100" selection-end-line="171" selection-end-column="100" />
+              <folding>
+                <marker date="1476904266428" expanded="true" signature="5303:5333" placeholder="SELECT uid,u... users" />
+                <marker date="1476904266428" expanded="true" signature="6279:6310" placeholder="SELECT opdra... opdrachten" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +173,8 @@
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/pages/viewimages.php" />
         <option value="$PROJECT_DIR$/own_android_connect/dashboardv2/index.html" />
         <option value="$PROJECT_DIR$/android/dashboard/pages/blank.php" />
+        <option value="$PROJECT_DIR$/android/dashboard/pages/remove_assignment.php" />
+        <option value="$PROJECT_DIR$/android/dashboard/pages/add_user.php" />
       </list>
     </option>
   </component>
@@ -130,7 +189,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-1928" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -160,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,12 +277,113 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -303,14 +462,18 @@
       <workItem from="1473952667748" duration="2214000" />
       <workItem from="1475498100271" duration="927000" />
       <workItem from="1476113964082" duration="855000" />
+      <workItem from="1476176999246" duration="1112000" />
+      <workItem from="1476282749761" duration="2041000" />
+      <workItem from="1476900515890" duration="4013000" />
+      <workItem from="1476992130378" duration="2600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64108000" />
+    <option name="totallyTimeSpent" value="73874000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -353,25 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/android_connect/create_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/get_all_opdrachten.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/update_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/delete_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/get_all_opdrachten.php" />
-    <entry file="file://$PROJECT_DIR$/own_android_connect/delete_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/test.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/create_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/db_connect.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/delete_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/android_connect/update_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/own_android_connect/db_connect.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="1720" column="39" selection-start-line="1720" selection-start-column="39" selection-end-line="1720" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/own_android_connect/create_opdracht.php" />
     <entry file="file://$PROJECT_DIR$/own_android_connect/update_opdracht.php" />
     <entry file="file://$PROJECT_DIR$/own_android_connect/login.php" />
@@ -416,7 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -428,11 +571,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/remove_assignment.php">
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/template_pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/template_pages/icons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/vendor/font-awesome/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="3" column="824" selection-start-line="3" selection-start-column="824" selection-end-line="3" selection-end-column="824" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <marker date="1473776630394" expanded="true" signature="462:508" placeholder="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/dist/css/sb-admin-2.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/dist/css/sb-admin-2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2091">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/vendor/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/vendor/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3570">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/db_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -444,13 +653,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/add_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <marker date="1473954295303" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+            <marker date="1473954295303" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+            <marker date="1473954295303" expanded="true" signature="5899:5929" placeholder="SELECT uid,u... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/android/dashboard/pages/blank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="115" column="99" selection-start-line="115" selection-start-column="99" selection-end-line="115" selection-end-column="99" />
+        <state relative-caret-position="255">
+          <caret line="20" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding>
-            <marker date="1476114828636" expanded="true" signature="4657:4687" placeholder="SELECT uid,u... users" />
+            <marker date="1476902552729" expanded="true" signature="5303:5333" placeholder="SELECT uid,u... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/remove_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1283">
+          <caret line="171" column="100" selection-start-line="171" selection-start-column="100" selection-end-line="171" selection-end-column="100" />
+          <folding>
+            <marker date="1476904266428" expanded="true" signature="5303:5333" placeholder="SELECT uid,u... users" />
+            <marker date="1476904266428" expanded="true" signature="6279:6310" placeholder="SELECT opdra... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/add_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <marker date="1476993019083" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
+            <marker date="1476993019083" expanded="true" signature="1234:1324" placeholder="INSERT INTO users... " />
+            <marker date="1476993019083" expanded="true" signature="6499:6529" placeholder="SELECT uid,u... users" />
+            <marker date="1476993019083" expanded="true" signature="8897:9149" placeholder="..." />
+            <marker date="1476993019083" expanded="true" signature="9279:9505" placeholder="..." />
+            <marker date="1476993019083" expanded="true" signature="9636:9860" placeholder="..." />
+            <marker date="1476993019083" expanded="true" signature="9991:10218" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/dashboard/pages/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

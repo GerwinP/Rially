@@ -11,7 +11,8 @@ session_start();
 require_once __DIR__ . '/../../db_config.php';
 
 if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
-    header("location: login.php");
+    header("location: login");
+    echo "<script>window.location = 'http://www.google.com'</script>";
 }
 
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
