@@ -20,7 +20,7 @@ if ($db->connect_error) {
     die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
 }
 
-$username = $_GET['username'];
+$account = $_GET['username'];
 
 ?>
 
@@ -67,91 +67,18 @@ $username = $_GET['username'];
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php">Rially Admin</a>
-        </div>
-        <!-- /.navbar-header -->
 
-        <ul class="nav navbar-top-links navbar-right">
+        <?php include "page_parts/header.html"?>
 
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
-        </ul>
-        <!-- /.navbar-top-links -->
+        <?php include "page_parts/navbar.html" ?>
 
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!-- /input-group -->
-                    </li>
-                    <li>
-                        <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="add_user.php"><i class="fa fa-users fa-fw"></i> Add User/Team</a>
-                    </li>
-                    <li>
-                        <a href="add_assignment.php"><i class="fa fa-list fa-fw"></i> Add Assignments</a>
-                    </li>
-                    <li>
-                        <a href="add_modifier.php"><i class="fa fa-list fa-fw"></i> Add Modifiers</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <?php
-                            $result = mysqli_query($db, "SELECT uid,username FROM users");
-
-                            while ($row = mysqli_fetch_array($result)) {
-                                $tempusername = $row["username"];
-                                $uid = $row["uid"];
-                                echo "<li> <a href='viewimages.php?username=$tempusername'>$tempusername</a></li>";
-                            }
-                            ?>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
     </nav>
 
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
                 <?php
-                echo "<h1 class='page-header'>$username</h1>"
+                echo "<h1 class='page-header'>$account</h1>"
                 ?>
             </div>
             <!-- /.col-lg-12 -->
@@ -162,7 +89,7 @@ $username = $_GET['username'];
                 <ul>
                     <?php
 
-                    $result = mysqli_query($db, "SELECT * FROM image_teams WHERE username = '$username'");
+                    $result = mysqli_query($db, "SELECT * FROM image_teams WHERE username = '$account'");
 
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_array($result)) {
