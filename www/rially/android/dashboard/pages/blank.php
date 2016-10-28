@@ -35,6 +35,8 @@ if ($db->connect_error) {
 
     <title>Rially Admin - Blank</title>
 
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -75,6 +77,16 @@ if ($db->connect_error) {
             </div>
             <!-- /.col-lg-12 -->
         </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>A random delete thing</h1>
+                <div class="delete">
+                    <button>Hello</button>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- /#page-wrapper -->
 
