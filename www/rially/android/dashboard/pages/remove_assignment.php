@@ -78,7 +78,7 @@ if ($db->connect_error) {
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <form>
+                <form id="assignment_list">
                     <?php
                     $result = mysqli_query($db, "SELECT opdracht FROM opdrachten");
 
@@ -87,8 +87,25 @@ if ($db->connect_error) {
                         echo "<label><input type='checkbox' name='$opdracht'> $opdracht</label></br>";
                     }
                     ?>
-                    <input class="btn btn-danger" type="submit" value="Delete selected assignment(s)">
+                    <input class="btn btn-danger" type="submit" value="Delete selected assignment(s)" >
                 </form>
+                <script>
+                    function myFunction() {
+                        var form = document.getElementById("assignment_list");
+                        var txt;
+                        var i;
+                        var r = confirm("Press a button");
+                        if (r == true) {
+                            for (i = 0; i <x.length; i++) {
+                                if (form[i].checked) {
+                                    var checkedValue = form[i].value;
+                                }
+                            }
+                        } else {
+
+                        }
+                    }
+                </script>
 
             </div>
         </div>

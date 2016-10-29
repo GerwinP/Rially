@@ -12,6 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -20,43 +21,74 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="blank.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/blank.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="add_user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="134">
+              <caret line="139" column="104" selection-start-line="139" selection-start-column="104" selection-end-line="139" selection-end-column="104" />
+              <folding>
+                <marker date="1477755475909" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
+                <marker date="1477755475909" expanded="true" signature="1234:1324" placeholder="INSERT INTO users... " />
+                <marker date="1477755475909" expanded="true" signature="5369:5621" placeholder="..." />
+                <marker date="1477755475909" expanded="true" signature="5751:5977" placeholder="..." />
+                <marker date="1477755475909" expanded="true" signature="6108:6332" placeholder="..." />
+                <marker date="1477755475909" expanded="true" signature="6463:6690" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/index.php">
+      <file leaf-file-name="add_modifier.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_modifier.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="627">
+              <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1477755499109" expanded="true" signature="632:684" placeholder="SELECT * FRO... modifiers" />
+                <marker date="1477755499109" expanded="true" signature="775:826" placeholder="INSERT INTO modifiers... " />
+                <marker date="1477755499109" expanded="true" signature="4041:4071" placeholder="SELECT modif... modifiers" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/header.html">
+      <file leaf-file-name="add_assignment.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="576">
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1477755538014" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+                <marker date="1477755538014" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+                <marker date="1477755538014" expanded="true" signature="4015:4046" placeholder="SELECT opdra... opdrachten" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/navbar.html">
+      <file leaf-file-name="remove_assignment.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="89" column="102" selection-start-line="89" selection-start-column="102" selection-end-line="89" selection-end-column="102" />
+              <folding>
+                <marker date="1477763870216" expanded="true" signature="2235:2266" placeholder="SELECT opdra... opdrachten" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delete_opdracht.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rially/android/delete_opdracht.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1477751723977" expanded="true" signature="449:483" placeholder="DELETE FROM " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,29 +114,28 @@
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/blank.php" />
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/navbar.html" />
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/index.php" />
-        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php" />
-        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_modifier.php" />
-        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php" />
-        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php" />
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/viewimages.php" />
+        <option value="$PROJECT_DIR$/rially/android/db_config.php" />
+        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php" />
+        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_modifier.php" />
+        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php" />
+        <option value="$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="793" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -131,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -147,6 +179,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rially" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -246,27 +292,12 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rially" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/rially" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -277,9 +308,6 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -294,6 +322,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -301,19 +335,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -338,21 +359,21 @@
       <workItem from="1464260589597" duration="18000" />
       <workItem from="1471616099650" duration="63000" />
       <workItem from="1477499454353" duration="2588000" />
+      <workItem from="1477752436219" duration="6027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8698000" />
+    <option name="totallyTimeSpent" value="14725000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="793" y="0" width="814" height="867" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16822916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15789473" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -363,6 +384,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -388,24 +410,95 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/delete_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/update_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/get_all_opdrachten.php" />
-    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/db_config.php" />
-    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/create_opdracht.php" />
-    <entry file="file://$PROJECT_DIR$/html/index.php" />
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts.html">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/blank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="1071">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="425">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/delete_opdracht.php" />
+    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/update_opdracht.php" />
+    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/get_all_opdrachten.php" />
+    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/db_config.php" />
+    <entry file="file://$PROJECT_DIR$/rially/own_android_connect/create_opdracht.php" />
+    <entry file="file://$PROJECT_DIR$/html/index.php" />
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts.html" />
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/viewimages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="91" column="102" selection-start-line="91" selection-start-column="102" selection-end-line="91" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_modifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/db_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -418,99 +511,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="134">
+          <caret line="139" column="104" selection-start-line="139" selection-start-column="104" selection-end-line="139" selection-end-column="104" />
           <folding>
-            <marker date="1477501191927" expanded="true" signature="638:693" ph="SELECT * FRO... opdrachten" />
-            <marker date="1477501191927" expanded="true" signature="784:838" ph="INSERT INTO opdrachten... " />
+            <marker date="1477755475909" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
+            <marker date="1477755475909" expanded="true" signature="1234:1324" placeholder="INSERT INTO users... " />
+            <marker date="1477755475909" expanded="true" signature="5369:5621" placeholder="..." />
+            <marker date="1477755475909" expanded="true" signature="5751:5977" placeholder="..." />
+            <marker date="1477755475909" expanded="true" signature="6108:6332" placeholder="..." />
+            <marker date="1477755475909" expanded="true" signature="6463:6690" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/delete_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1477751723977" expanded="true" signature="449:483" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_modifier.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="627">
+          <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
           <folding>
-            <marker date="1477501203168" expanded="true" signature="632:684" ph="SELECT * FRO... modifiers" />
-            <marker date="1477501203168" expanded="true" signature="775:826" ph="INSERT INTO modifiers... " />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1477755499109" expanded="true" signature="632:684" placeholder="SELECT * FRO... modifiers" />
+            <marker date="1477755499109" expanded="true" signature="775:826" placeholder="INSERT INTO modifiers... " />
+            <marker date="1477755499109" expanded="true" signature="4041:4071" placeholder="SELECT modif... modifiers" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="576">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding>
-            <marker date="1477501216203" expanded="true" signature="1088:1136" ph="SELECT * FRO... users" />
-            <marker date="1477501216203" expanded="true" signature="1234:1324" ph="INSERT INTO users... " />
-            <marker date="1477501216203" expanded="true" signature="5359:5611" ph="..." />
-            <marker date="1477501216203" expanded="false" signature="5470:5477" ph="×" />
-            <marker date="1477501216203" expanded="true" signature="5741:5967" ph="..." />
-            <marker date="1477501216203" expanded="false" signature="5852:5859" ph="×" />
-            <marker date="1477501216203" expanded="true" signature="6098:6322" ph="..." />
-            <marker date="1477501216203" expanded="false" signature="6209:6216" ph="×" />
-            <marker date="1477501216203" expanded="true" signature="6453:6680" ph="..." />
-            <marker date="1477501216203" expanded="false" signature="6564:6571" ph="×" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1477755538014" expanded="true" signature="638:693" placeholder="SELECT * FRO... opdrachten" />
+            <marker date="1477755538014" expanded="true" signature="784:838" placeholder="INSERT INTO opdrachten... " />
+            <marker date="1477755538014" expanded="true" signature="4015:4046" placeholder="SELECT opdra... opdrachten" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="89" column="102" selection-start-line="89" selection-start-column="102" selection-end-line="89" selection-end-column="102" />
           <folding>
-            <marker date="1477501230547" expanded="true" signature="2214:2245" ph="SELECT opdra... opdrachten" />
+            <marker date="1477763870216" expanded="true" signature="2235:2266" placeholder="SELECT opdra... opdrachten" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/page_parts/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/viewimages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="91" column="102" selection-start-line="91" selection-start-column="102" selection-end-line="91" selection-end-column="102" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1477501438115" expanded="true" signature="2363:2416" ph="SELECT * FRO... image_teams" />
-            <marker date="1477501438115" expanded="true" signature="2415:2416" ph="SELECT * FRO... image_teams" />
-            <marker date="1477501438115" expanded="true" signature="2800:2843" ph="SELECT * FRO... images" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_modifier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

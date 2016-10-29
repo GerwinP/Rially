@@ -36,21 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
             if ($result) {
                 $response['success'] = 1;
                 $response['message'] = "Assignment succesfully added";
-                echo json_encode($response);
+                //json_encode($response);
             } else {
                 $response['success'] = 0;
                 $response['message'] = "Could not add the assignment";
-                echo json_encode($response);
+                json_encode($response);
             }
         } else {
             $response['success'] = 0;
             $response['message'] = "Assignment already exists";
-            echo json_encode($response);
+            json_encode($response);
         }
     } else {
         $response['success'] = 0;
         $response['message'] = "Not all fields are filled";
-        echo json_encode($response);
+        json_encode($response);
     }
 }
 ?>
@@ -104,22 +104,39 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
 
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <h1 class="page-header">Add new assignment</h1>
             </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <div class="row">
+
+            <div class="col-lg-6">
+                <h1 class="page-header">Existing Assignments</h1>
+            </div>
+
             <div class="col-md-4">
                 <form role="form" action="add_assignment.php" method="post" >
                     <fieldset>
                         <div class="form-group">
                             <label>Assignment</label>
-                            <input class="form-control" placeholder="Assignment" name="assignment">
+                            <input class="form-control" placeholder="Assignment" name="assignment" autofocus>
                         </div>
                         <button type="submit" class="btn btn-primary">Add assignment</button>
                     </fieldset>
                 </form>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-6">
+                <div style="overflow-y: auto; height: 450px;">
+                    <?php
+                    $result = mysqli_query($db, "SELECT opdracht FROM opdrachten");
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        $opdracht = $row["opdracht"];
+                        echo "- $opdracht</br>";
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>

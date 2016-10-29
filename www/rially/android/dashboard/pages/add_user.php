@@ -137,7 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
                     <fieldset>
                         <div class="form-group">
                             <label>Username/Team name</label>
-                            <input class="form-control" placeholder="Username" name="Username">
+                            <input class="form-control" placeholder="Username" name="Username" autofocus>
                         </div>
                         <div class="form-group">
                             <label>Password</label>

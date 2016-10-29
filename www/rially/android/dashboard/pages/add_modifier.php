@@ -38,21 +38,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
             if ($result) {
                 $response['success'] = 1;
                 $response['message'] = "Modifier succesfully added";
-                echo json_encode($response);
+                //echo json_encode($response);
             } else {
                 $response['success'] = 0;
                 $response['message'] = "Could not add the modifier";
-                echo json_encode($response);
+                //echo json_encode($response);
             }
         } else {
             $response['success'] = 0;
             $response['message'] = "Modifier already exists";
-            echo json_encode($response);
+            //echo json_encode($response);
         }
     } else {
         $response['success'] = 0;
         $response['message'] = "Not all fields are filled";
-        echo json_encode($response);
+        //echo json_encode($response);
     }
 }
 ?>
@@ -106,22 +106,39 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
 
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <h1 class="page-header">Add new modifier</h1>
             </div>
             <!-- /.col-lg-12 -->
-        </div>
-        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="page-header">Existing modifiers</h1>
+            </div>
+
             <div class="col-md-4">
                 <form role="form" action="add_modifier.php" method="post" >
                     <fieldset>
                         <div class="form-group">
                             <label>Assignment</label>
-                            <input class="form-control" placeholder="Modifier" name="modifier">
+                            <input class="form-control" placeholder="Modifier" name="modifier" autofocus>
                         </div>
                         <button type="submit" class="btn btn-primary">Add modifier</button>
                     </fieldset>
                 </form>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-6">
+                <div style="overflow-y: auto; height: 450px;">
+                    <?php
+                    $result = mysqli_query($db, "SELECT modifier FROM modifiers");
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        $modifier = $row["modifier"];
+                        echo "- $modifier</br>";
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>
