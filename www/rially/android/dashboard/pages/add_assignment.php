@@ -113,6 +113,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
             </div>
 
             <div class="col-md-4">
+               <label>Assignment</label>
+                <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
+                <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
+            </div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-6">
+                <ul id="assignments"></ul>
+            </div>
+
+            <!--
+            <div class="col-md-4">
                 <form role="form" action="add_assignment.php" method="post" >
                     <fieldset>
                         <div class="form-group">
@@ -138,6 +150,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
                     ?>
                 </div>
             </div>
+            -->
         </div>
     </div>
     <!-- /#page-wrapper -->
@@ -156,6 +169,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom ajax script -->
+<script src="../js/add_assignment.js"></script>
 
 </body>
 
