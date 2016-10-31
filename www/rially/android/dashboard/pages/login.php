@@ -32,7 +32,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             $_SESSION['login'] = "";
         }
     } else {
-
+    	
     }
 }
 
