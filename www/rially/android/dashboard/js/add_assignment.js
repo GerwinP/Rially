@@ -18,19 +18,36 @@ $(function() {
         }
     });
 
+
+    var $alertSuccess = $('alert-success');
+    $alertSuccess.css("display", "inline");
+
+
     $('#add-assignment').on('click', function() {
 
         var add_assignment = {
             opdracht: $assignment.val()
         };
 
-        $.ajax( {
-           type: 'POST',
-            url: '../../create_opdracht.php',
-            data: add_assignment,
-            success: function(result) {
-                console.log(result);
-            }
-        });
+        if (add_assignment.opdracht == "") {
+
+        } else {
+
+            var $alertDanger = $('alert-danger');
+
+
+
+            $.ajax( {
+                type: 'POST',
+                url: '../../create_opdracht.php',
+                data: add_assignment,
+                success: function(result) {
+                    console.log(result);
+
+                }
+            });
+        }
+
+
     });
 });

@@ -113,6 +113,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
             </div>
 
             <div class="col-md-4">
+                <div class="alert alert-success alert-dismissable" style="display: none;">
+                    <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                    Successfully added a new assignment
+                </div>
+                <div class="alert alert-danger alert-dismissable" style="display: none;">
+                    <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                    Failed to add a new assignment
+                </div>
                <label>Assignment</label>
                 <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
                 <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
