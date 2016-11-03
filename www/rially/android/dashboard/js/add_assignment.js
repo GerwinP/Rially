@@ -19,8 +19,8 @@ $(function() {
     });
 
 
-    var $alertSuccess = $('alert-success');
-    $alertSuccess.css("display", "inline");
+    
+    
 
 
     $('#add-assignment').on('click', function() {
@@ -34,7 +34,7 @@ $(function() {
         } else {
 
             var $alertDanger = $('alert-danger');
-
+            var $alertSuccess = $('.alert-success-message');
 
 
             $.ajax( {
@@ -43,7 +43,7 @@ $(function() {
                 data: add_assignment,
                 success: function(result) {
                     console.log(result);
-
+                    $alertSuccess.css("display", "inline");
                 }
             });
         }

@@ -80,6 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="../css/styles.css", rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -113,14 +115,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
             </div>
 
             <div class="col-md-4">
-                <div class="alert alert-success alert-dismissable" style="display: none;">
+            <div class="alert-success-message">
+                <div class="alert alert-success alert-dismissable">
                     <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
                     Successfully added a new assignment
                 </div>
+            </div>
+            <div class="alert-danger-message">
                 <div class="alert alert-danger alert-dismissable" style="display: none;">
                     <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
                     Failed to add a new assignment
                 </div>
+            </div>
                <label>Assignment</label>
                 <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
                 <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
