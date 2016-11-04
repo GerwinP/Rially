@@ -20,9 +20,26 @@ $(function() {
     
     $removeAssignments.on('click', function() {
 
+        var ids = [];
+
+        $("input:checkbox").each(function() {
+
+            var $this = $(this);
+
+           if ($this.is(":checked")) {
+               ids.push($this.attr("id"));
+           }
+        });
+
+        console.log(ids);
+
         $.ajax({
             type:'POST',
-            url:'../../remove_assignments.php'
+            url:'../../remove_assignments.php',
+            data:ids,
+            success: function(successReturn) {
+                console.log(successReturn);
+            }
         })
     });
 });
