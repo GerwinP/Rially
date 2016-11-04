@@ -86,7 +86,7 @@ $account = $_GET['username'];
         <div class = "row">
             <div class="col-lg-12">
 
-                <ul>
+                <ul class="list-unstyled">
                     <?php
 
                     $result = mysqli_query($db, "SELECT * FROM image_teams WHERE username = '$account'");

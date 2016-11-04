@@ -20,39 +20,6 @@ if ($db->connect_error) {
     die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
-
-    $response = array();
-
-    $assignment = $_POST['assignment'];
-
-    if ($assignment != "") {
-
-        $check = mysqli_query($db, "SELECT * FROM opdrachten WHERE opdracht = '$assignment'");
-
-        if (mysqli_num_rows($check) == 0 ) {
-            $result = mysqli_query($db, "INSERT INTO opdrachten(opdracht) VALUES('$assignment')");
-
-            if ($result) {
-                $response['success'] = 1;
-                $response['message'] = "Assignment succesfully added";
-                //json_encode($response);
-            } else {
-                $response['success'] = 0;
-                $response['message'] = "Could not add the assignment";
-                json_encode($response);
-            }
-        } else {
-            $response['success'] = 0;
-            $response['message'] = "Assignment already exists";
-            json_encode($response);
-        }
-    } else {
-        $response['success'] = 0;
-        $response['message'] = "Not all fields are filled";
-        json_encode($response);
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -80,6 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="../css/styles.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -106,36 +75,26 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
         <div class="row">
             <div class="col-lg-6">
                 <h1 class="page-header">Add new assignment</h1>
-            </div>
-
-            <div class="col-lg-6">
-                <h1 class="page-header">Existing Assignments</h1>
-            </div>
-
-            <div class="col-md-4">
-                <form role="form" action="add_assignment.php" method="post" >
-                    <fieldset>
-                        <div class="form-group">
-                            <label>Assignment</label>
-                            <input class="form-control" placeholder="Assignment" name="assignment" autofocus>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add assignment</button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="col-md-2">
-
+                <div class="alert-success-message">
+                    <div class="alert alert-success alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        Successfully added a new assignment
+                    </div>
+                </div>
+                <div class="alert-danger-message">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        <span id = "failmessage">Failed to add a new assignment</span>
+                    </div>
+                </div>
+                <label>Assignment</label>
+                <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
+                <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
             </div>
             <div class="col-md-6">
-                <div style="overflow-y: auto; height: 450px;">
-                    <?php
-                    $result = mysqli_query($db, "SELECT opdracht FROM opdrachten");
-
-                    while ($row = mysqli_fetch_array($result)) {
-                        $opdracht = $row["opdracht"];
-                        echo "- $opdracht</br>";
-                    }
-                    ?>
+                <h1 class="page-header">Existing Assignments</h1>
+                <div style="overflow:auto; height:600px;">
+                    <ul id="assignments"></ul>
                 </div>
             </div>
         </div>
@@ -156,6 +115,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['assignment'])) {
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom ajax script -->
+<script src="../js/add_assignment.js"></script>
 
 </body>
 
