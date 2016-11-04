@@ -11,7 +11,7 @@ require_once __DIR__ . '/db_config.php';
 $response = array();
 
 //check for required fields
-if (isset($_POST['opdracht'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['opdracht'])) {
 
     $opdracht = $_POST['opdracht'];
 
@@ -22,24 +22,41 @@ if (isset($_POST['opdracht'])) {
         die('Connect Error ('. $db->connect_errno . ')' . $db->connect_error);
     }
 
-    //try to insert row in database
-    $result = mysqli_query($db, "INSERT INTO opdrachten(opdracht) VALUES('$opdracht')");
+    if ($opdracht != "") {
 
-    //check if row is inserted
-    if ($result) {
-        //successfully inserted into database
-        $response["success"] = 1;
-        $response["message"] = "Opdracht successfully created";
+        $check = mysqli_query($db, "SELECT * FROM opdrachten WHERE opdracht = '$opdracht'");
 
-        //echoing JSON response
-        echo json_encode($response);
-    } else {
-        //failed to insert row
-        $response["success"] = 0;
-        $response["message"] = "Oops! An error occurred!";
+        if (mysqli_num_rows($check) == 0) {
+            //try to insert row in database
+            $result = mysqli_query($db, "INSERT INTO opdrachten(opdracht) VALUES('$opdracht')");
 
-        echo json_encode($response);
+            //check if row is inserted
+            if ($result) {
+                //successfully inserted into database
+                $response["success"] = 1;
+                $response["message"] = "Assignment successfully created";
+                $response["opdracht"] = $opdracht;
+
+                //echoing JSON response
+                echo json_encode($response);
+            } else {
+                //failed to insert row
+                $response["success"] = 0;
+                $response["message"] = "Could not add the assignment";
+
+                echo json_encode($response);
+            }
+        } else {
+            $response['success'] = 0;
+            $response['message'] = "Assignment already exists";
+
+            echo json_encode($response);
+        }
+
+
     }
+
+
 } else {
     //required field was missing
     $response["success"] = 0;

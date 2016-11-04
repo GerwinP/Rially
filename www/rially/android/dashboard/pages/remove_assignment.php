@@ -78,10 +78,10 @@ if ($db->connect_error) {
         </div>
         <div class="row">
             <div class="col-lg-12">
+                <!--
                 <form id="assignment_list" method="post">
                     <?php
                     $result = mysqli_query($db, "SELECT opdracht FROM opdrachten");
-
                     while ($row = mysqli_fetch_array($result)) {
                         $opdracht = $row["opdracht"];
                         echo "<label><input type='checkbox' name='$opdracht'> $opdracht</label></br>";
@@ -89,33 +89,9 @@ if ($db->connect_error) {
                     ?>
                     <input class="btn btn-danger" type="submit" value="Delete selected assignment(s)" onclick="myFunction()">
                 </form>
-                <script>
-                    function myFunction() {
-                        var form = document.getElementById("assignment_list");
-                        var i;
-                        var r = confirm("Press a button");
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-
-                            }
-                        };
-                        if (r == true) {
-                            var assignments = [];
-                            for (i = 0; i <x.length; i++) {
-                                if (form[i].checked) {
-                                    assignments.push(form[i].value);
-                                }
-                                var json = JSON.stringify(assignments);
-                                xhttp.open("POST", "/phpfiles/remove_assignments.php", true);
-                                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                                xhttp.send("json=" + json); //the array build in the for loop
-                            }
-                        } else {
-
-                        }
-                    }
-                </script>
+                -->
+                <button id="remove-assignment" class="btn btn-danger" >Remove selected assignments</button>
+                <ul id="all-assignments" class="list-unstyled"></ul>
 
             </div>
         </div>
@@ -136,6 +112,8 @@ if ($db->connect_error) {
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<script src="../js/remove_assignment.js"></script>
 
 </body>
 

@@ -6,6 +6,8 @@ $(function() {
 
     var $assignments = $('#assignments');
     var $assignment = $('#assignment');
+    var $addAssignmentButton = $('#add-assignment');
+
     $.ajax({
        type: 'GET',
         url: '../../get_all_opdrachten.php',
@@ -18,36 +20,41 @@ $(function() {
         }
     });
 
-
-    
-    
-
-
-    $('#add-assignment').on('click', function() {
+    $addAssignmentButton.on('click', function() {
 
         var add_assignment = {
             opdracht: $assignment.val()
         };
 
-        if (add_assignment.opdracht == "") {
-
-        } else {
-
-            var $alertDanger = $('alert-danger');
-            var $alertSuccess = $('.alert-success-message');
-
-
-            $.ajax( {
-                type: 'POST',
-                url: '../../create_opdracht.php',
-                data: add_assignment,
-                success: function(result) {
-                    console.log(result);
-                    $alertSuccess.css("display", "inline");
+        var $alertDanger = $('.alert-danger-message');
+        var $alertSuccess = $('.alert-success-message');
+            
+        $.ajax( {
+            type: 'POST',
+            url: '../../create_opdracht.php',
+            data: add_assignment,
+            success: function(response) {
+                var result = JSON.parse(response);
+                if (result.success == 1) {
+                    $alertSuccess.fadeIn();
+                    document.getElementById("assignment").value = "";
+                    $assignments.append('<li>' + result.opdracht + '</li>');
+                    setTimeout(function() {
+                        $alertSuccess.fadeOut(1000);
+                    }, 5000);
+                } else {
+                    $('#failmessage').text(result.message);
+                    $alertDanger.fadeIn();
+                    setTimeout(function() {
+                        $alertDanger.fadeOut(1000);
+                    }, 5000);
                 }
-            });
-        }
-
-
+            }
+        });
     });
+
+    $addAssignmentButton.mouseup(function(){
+        $(this).blur();
+    })
 });
+
