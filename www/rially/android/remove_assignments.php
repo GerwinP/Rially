@@ -14,14 +14,19 @@ if ($db->connect_error) {
     die('Connect Error(' . $db->connect_errno . ')' . $db->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['opdrachten'])) {
+if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['ids'])) {
     
-    $opdrachten = $_POST['opdrachten'];
+    $opdrachten = $_POST['ids'];
     $response = [];
 
-    $response["success"] = 1;
+    $opdrachtImplode = implode(",", $opdrachten);
 
-    echo json_encode($response);
+    if (count($opdrachten) != 0) {
+        $deleted = mysqli_query($db, "DELETE FROM opdrachten WHERE id IN ($opdrachtImplode)");
 
+        $response["success"] = 1;
+        $response["ids"] = $opdrachten;
 
+        echo json_encode($opdrachten);
+    }
 }

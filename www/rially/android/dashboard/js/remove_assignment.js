@@ -7,6 +7,10 @@ $(function() {
     var $assigments = $('#all-assignments');
     var $removeAssignments = $('#remove-assignment');
 
+    if ($assigments.children().length == 0) {
+        console.log("De kinderen zijn 0 geworden");
+    }
+
     $.ajax({
         type:'GET',
         url: '../../get_all_opdrachten.php',
@@ -22,6 +26,10 @@ $(function() {
 
         var ids = [];
 
+        var data = {
+          ids : ids
+        };
+
         $("input:checkbox").each(function() {
 
             var $this = $(this);
@@ -31,14 +39,16 @@ $(function() {
            }
         });
 
-        console.log(ids);
-
         $.ajax({
             type:'POST',
             url:'../../remove_assignments.php',
-            data:ids,
+            data:data,
             success: function(successReturn) {
-                console.log(successReturn);
+                var result = JSON.parse(successReturn);
+
+                $.each(result, function(i, id) {
+                    $("input:checkbox[id^=" + id +"]").parents("li").hide();
+                });
             }
         })
     });

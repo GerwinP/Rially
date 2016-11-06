@@ -21,13 +21,13 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4335512">
+    <splitter split-orientation="horizontal" split-proportion="0.442992">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="add_user.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="678">
+                <state relative-caret-position="2278">
                   <caret line="139" column="104" selection-start-line="139" selection-start-column="104" selection-end-line="139" selection-end-column="104" />
                   <folding>
                     <marker date="1478294119032" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
@@ -41,10 +41,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="create_opdracht.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="create_opdracht.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rially/android/create_opdracht.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
+                <state relative-caret-position="170">
                   <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="71" />
                   <folding>
                     <marker date="1478294118636" expanded="true" signature="585:638" placeholder="SELECT * FRO... opdrachten" />
@@ -78,7 +78,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="remove_assignment.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="remove_assignment.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="423">
@@ -106,21 +106,35 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="remove_assignments.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="remove_assignments.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/rially/android/remove_assignments.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+                <state relative-caret-position="408">
+                  <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+                  <folding>
+                    <marker date="1478463441167" expanded="true" signature="555:589" placeholder="DELETE FROM " />
+                    <marker date="1478463441167" expanded="true" signature="555:591" placeholder="DELETE FROM " />
+                    <marker date="1478463441167" expanded="true" signature="555:608" placeholder="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="remove_assignment.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="remove_assignment.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js">
+          <file leaf-file-name="add_assignment.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/add_assignment.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -156,8 +170,8 @@
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php" />
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php" />
         <option value="$PROJECT_DIR$/rially/android/dashboard/pages/phpfiles/remove_assignments.php" />
-        <option value="$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js" />
         <option value="$PROJECT_DIR$/rially/android/remove_assignments.php" />
+        <option value="$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js" />
       </list>
     </option>
   </component>
@@ -201,8 +215,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,36 +337,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phpfiles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rially" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -428,11 +412,12 @@
       <workItem from="1477765174155" duration="1553000" />
       <workItem from="1477826289181" duration="596000" />
       <workItem from="1478295804862" duration="1300000" />
+      <workItem from="1478458791907" duration="5436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18174000" />
+    <option name="totallyTimeSpent" value="23610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -478,6 +463,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+          <folding>
+            <marker date="1478294119200" expanded="true" signature="2270:2301" placeholder="SELECT opdra... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/delete_opdracht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478294121787" expanded="true" signature="449:483" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/remove_assignments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478463441167" expanded="true" signature="555:589" placeholder="DELETE FROM " />
+            <marker date="1478463441167" expanded="true" signature="555:591" placeholder="DELETE FROM " />
+            <marker date="1478463441167" expanded="true" signature="555:608" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2278">
@@ -537,9 +570,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -602,9 +633,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -776,26 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-          <folding>
-            <marker date="1478294119200" expanded="true" signature="2270:2301" placeholder="SELECT opdra... opdrachten" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/phpfiles/remove_assignments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_assignment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -806,7 +815,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/add_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
+        <state relative-caret-position="2278">
           <caret line="139" column="104" selection-start-line="139" selection-start-column="104" selection-end-line="139" selection-end-column="104" />
           <folding>
             <marker date="1478294119032" expanded="true" signature="1088:1136" placeholder="SELECT * FRO... users" />
@@ -819,17 +828,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/add_assignment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/remove_assignments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <marker date="1478463441167" expanded="true" signature="555:589" placeholder="DELETE FROM " />
+            <marker date="1478463441167" expanded="true" signature="555:591" placeholder="DELETE FROM " />
+            <marker date="1478463441167" expanded="true" signature="555:608" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/phpfiles/remove_assignments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rially/android/create_opdracht.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="170">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="71" />
           <folding>
             <marker date="1478294118636" expanded="true" signature="585:638" placeholder="SELECT * FRO... opdrachten" />
@@ -838,10 +867,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rially/android/remove_assignments.php">
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/pages/remove_assignment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+        <state relative-caret-position="423">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+          <folding>
+            <marker date="1478294119200" expanded="true" signature="2270:2301" placeholder="SELECT opdra... opdrachten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rially/android/dashboard/js/remove_assignment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
