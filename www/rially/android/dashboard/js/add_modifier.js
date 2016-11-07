@@ -1,44 +1,44 @@
 /**
- * Created by Gerwin on 31-10-2016.
+ * Created by Admin on 11/7/2016.
  */
 
 $(function() {
 
-    var $assignments = $('#assignments');
-    var $assignment = $('#assignment');
-    var $addAssignmentButton = $('#add-assignment');
+    var $modifiers = $('#modifiers');
+    var $modifier = $('#modifier');
+    var $addModifier = $('#add-modifier');
     var $alertDanger = $('.alert-danger-message');
     var $alertSuccess = $('.alert-success-message');
 
     $.ajax({
-       type: 'GET',
-        url: '../../get_all_opdrachten.php',
-        success: function(assignmentsReturn) {
-            var dingen = JSON.parse(assignmentsReturn);
-            //console.log(dingen.opdrachten[0]);
-            $.each(dingen.opdrachten, function(i, ding) {
-               $assignments.append('<li>' + ding.opdracht + '</li>');
+        type: 'GET',
+        url: '../../get_all_modifiers.php',
+        success: function(modifierResult) {
+            var modifiers = JSON.parse(modifierResult);
+            $.each(modifiers.modifiers, function(i, modifier) {
+                $modifiers.append('<li>' + modifier.modifier + '</li>');
             });
         }
     });
 
-    $addAssignmentButton.on('click', function() {
+    $addModifier.on('click', function() {
 
-        if ($assignment.val() != "") {
-            var add_assignment = {
-                opdracht: $assignment.val()
+        if ($modifier.val() != "") {
+
+            var add_modifier = {
+                modifier: $modifier.val()
             };
 
             $.ajax( {
                 type: 'POST',
-                url: '../../create_opdracht.php',
-                data: add_assignment,
+                url: '../../create_modifier.php',
+                data: add_modifier,
                 success: function(response) {
                     var result = JSON.parse(response);
                     if (result.success == 1) {
                         $alertSuccess.fadeIn();
-                        document.getElementById("assignment").value = "";
-                        $assignments.append('<li>' + result.opdracht + '</li>');
+                        document.getElementById("modifier").value = "";
+                        $modifiers.append('<li>' + result.modifier + '</li>');
                         setTimeout(function() {
                             $alertSuccess.fadeOut(1000);
                         }, 5000);
@@ -50,20 +50,17 @@ $(function() {
                         }, 5000);
                     }
                 }
-            });
+            })
         } else {
             $('#failmessage').text("The required field is still empty");
             $alertDanger.fadeIn();
             setTimeout(function() {
                 $alertDanger.fadeOut(1000);
             }, 5000);
-        }
-
-
+        }   
     });
 
-    $addAssignmentButton.mouseup(function(){
+    $addModifier.mouseup(function() {
         $(this).blur();
     })
 });
-

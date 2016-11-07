@@ -82,6 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="../css/styles.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -106,40 +108,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
 
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h1 class="page-header">Add new modifier</h1>
+
+                <!-- Hidden Warnings -->
+
+                <div class="alert-success-message">
+                    <div class="alert alert-success alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        Successfully added a new modifier
+                    </div>
+                </div>
+                <div class="alert-danger-message">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        <span id = "failmessage">Failed to add a new assignment</span>
+                    </div>
+                </div>
+
+                <!-- /Hidden warnings -->
+
+                <label>Modifier</label>
+                <p><input class="form-control" type="text" id="modifier"  placeholder="Modifier" autofocus></p>
+                <button id="add-modifier" class="btn btn-primary" >Add modifier</button>
             </div>
+
+            <div class="col-lg-1"></div>
+
             <!-- /.col-lg-12 -->
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h1 class="page-header">Existing modifiers</h1>
-            </div>
-
-            <div class="col-md-4">
-                <form role="form" action="add_modifier.php" method="post" >
-                    <fieldset>
-                        <div class="form-group">
-                            <label>Assignment</label>
-                            <input class="form-control" placeholder="Modifier" name="modifier" autofocus>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add modifier</button>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="col-md-2">
-
-            </div>
-            <div class="col-md-6">
-                <div style="overflow-y: auto; height: 450px;">
-                    <?php
-                    $result = mysqli_query($db, "SELECT modifier FROM modifiers");
-
-                    while ($row = mysqli_fetch_array($result)) {
-                        $modifier = $row["modifier"];
-                        echo "- $modifier</br>";
-                    }
-                    ?>
+                <div style="overflow:auto; height:600px;">
+                    <ul id="modifiers"></ul>
                 </div>
             </div>
+
+            <div class="col-lg-1"></div>
         </div>
     </div>
     <!-- /#page-wrapper -->
@@ -158,6 +162,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom script for loading and adding stuff -->
+<script src="../js/add_modifier.js"></script>
 
 </body>
 

@@ -32,3 +32,12 @@ li img:hover {
 .alert-danger-message {
     display: none;
 }
+
+#no-assignments {
+    display: none;
+    color: red;
+}
+
+#remove-assignment {
+    display: none;
+}

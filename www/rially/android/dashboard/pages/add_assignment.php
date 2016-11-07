@@ -73,8 +73,11 @@ if ($db->connect_error) {
 
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h1 class="page-header">Add new assignment</h1>
+
+                <!-- Hidden Warnings -->
+
                 <div class="alert-success-message">
                     <div class="alert alert-success alert-dismissable">
                         <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
@@ -87,16 +90,26 @@ if ($db->connect_error) {
                         <span id = "failmessage">Failed to add a new assignment</span>
                     </div>
                 </div>
+                
+                <!-- /Hidden warnings -->
+                
                 <label>Assignment</label>
                 <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
                 <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
             </div>
-            <div class="col-md-6">
+
+            
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5">
                 <h1 class="page-header">Existing Assignments</h1>
                 <div style="overflow:auto; height:600px;">
                     <ul id="assignments"></ul>
                 </div>
             </div>
+
+            <div class="col-lg-1"></div>
         </div>
     </div>
     <!-- /#page-wrapper -->

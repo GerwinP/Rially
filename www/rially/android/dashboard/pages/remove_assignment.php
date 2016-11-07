@@ -35,6 +35,9 @@ if ($db->connect_error) {
 
     <title>Rially Admin - Blank</title>
 
+    <!-- jQuery UI CSS -->
+    <link href="../vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -46,6 +49,8 @@ if ($db->connect_error) {
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="../css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,22 +82,30 @@ if ($db->connect_error) {
             <!-- /.col-lg-12 -->
         </div>
         <div class="row">
+            <div class="col-lg-6">
+                <!-- Hidden Warnings -->
+
+                <div class="alert-success-message">
+                    <div class="alert alert-success alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        <span id = "successMessage">Successfully removed the checked assignments</span>
+                    </div>
+                </div>
+                <div class="alert-danger-message">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        <span id = "failmessage">Failed to remove any assignments</span>
+                    </div>
+                </div>
+
+                <!-- /Hidden warnings -->
+            </div>
+        </div>
+        <div class="row">
             <div class="col-lg-12">
-                <!--
-                <form id="assignment_list" method="post">
-                    <?php
-                    $result = mysqli_query($db, "SELECT opdracht FROM opdrachten");
-                    while ($row = mysqli_fetch_array($result)) {
-                        $opdracht = $row["opdracht"];
-                        echo "<label><input type='checkbox' name='$opdracht'> $opdracht</label></br>";
-                    }
-                    ?>
-                    <input class="btn btn-danger" type="submit" value="Delete selected assignment(s)" onclick="myFunction()">
-                </form>
-                -->
+                <span id="no-assignments">There are no assignments currently in the database, try adding a few <a href="add_assignment.php">here</a></span>
                 <button id="remove-assignment" class="btn btn-danger" >Remove selected assignments</button>
                 <ul id="all-assignments" class="list-unstyled"></ul>
-
             </div>
         </div>
     </div>
@@ -114,6 +127,9 @@ if ($db->connect_error) {
 <script src="../dist/js/sb-admin-2.js"></script>
 
 <script src="../js/remove_assignment.js"></script>
+
+<!-- jQuery UI JavaScript -->
+<script src="../vendor/jquery-ui/jquery-ui.min.js"></script>
 
 </body>
 
