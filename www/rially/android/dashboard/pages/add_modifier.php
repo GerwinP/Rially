@@ -19,42 +19,6 @@ $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
 if ($db->connect_error) {
     die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
 }
-
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['modifier'])) {
-
-
-
-    $response = array();
-
-    $modifier = $_POST['modifier'];
-
-    if ($modifier != "") {
-
-        $check = mysqli_query($db, "SELECT * FROM modifiers WHERE modifier = '$modifier'");
-
-        if (mysqli_num_rows($check) == 0 ) {
-            $result = mysqli_query($db, "INSERT INTO modifiers(modifier) VALUES('$modifier')");
-
-            if ($result) {
-                $response['success'] = 1;
-                $response['message'] = "Modifier succesfully added";
-                //echo json_encode($response);
-            } else {
-                $response['success'] = 0;
-                $response['message'] = "Could not add the modifier";
-                //echo json_encode($response);
-            }
-        } else {
-            $response['success'] = 0;
-            $response['message'] = "Modifier already exists";
-            //echo json_encode($response);
-        }
-    } else {
-        $response['success'] = 0;
-        $response['message'] = "Not all fields are filled";
-        //echo json_encode($response);
-    }
-}
 ?>
 
 <!DOCTYPE html>

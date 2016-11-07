@@ -99,6 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <link href="../css/styles.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -132,6 +134,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
         <div class="row">
             <div class="col-md-4">
 
+                <label>Username</label>
+                <p><input class="form-control" type="text" id="username"  placeholder="Username" autofocus></p>
+                <label>Password</label>
+                <p><input class="form-control" type="password" id="password"  placeholder="Password" autofocus></p>
+                <label>Reenter password</label>
+                <p><input class="form-control" type="password" id="rePassword"  placeholder="Reenter Password" autofocus></p>
+                <p><label class="checkbox-label"><input class="form-control" type="checkbox" id="isAdmin">Is admin</label></p>
+                <button id="add-user" class="btn btn-primary" >Add user</button>
+                <!-- THE OLD STUFF
                 <form role="form" action="add_user.php" method="post" >
 
                     <fieldset>
@@ -182,6 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
                     }
                 }
                 ?>
+                -->
             </div>
         </div>
     </div>

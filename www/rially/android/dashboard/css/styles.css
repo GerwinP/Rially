@@ -50,3 +50,10 @@ li img:hover {
 #remove-modifier {
     display: none;
 }
+
+label.checkbox-label input[type=checkbox] {
+    position: relative;
+    vertical-align: middle;
+    bottom: 1px;
+    color: red;
+}
