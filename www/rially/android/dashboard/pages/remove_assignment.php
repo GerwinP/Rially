@@ -33,7 +33,7 @@ if ($db->connect_error) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rially Admin - Blank</title>
+    <title>Rially Admin - Remove assignments</title>
 
     <!-- jQuery UI CSS -->
     <link href="../vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">

@@ -41,3 +41,12 @@ li img:hover {
 #remove-assignment {
     display: none;
 }
+
+#no-modifiers {
+    display: none;
+    color: red;
+}
+
+#remove-modifier {
+    display: none;
+}
