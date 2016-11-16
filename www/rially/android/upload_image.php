@@ -23,44 +23,55 @@ if (isset($_POST['image']) && isset($_POST['opdracht_ids']) && isset($_POST['use
         die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
     }
 
-    $result = mysqli_query($db, "INSERT INTO images(image) VALUES ('$image')");
+    $check = mysqli_query($db, "SELECT * FROM images WHERE image = '$image'");
 
-    if ($result) {
-        $response["success"] = 1;
-        $response["message"] = "Successfully uploaded image";
+    if (mysqli_num_rows($check) == 0) {
+        $result = mysqli_query($db, "INSERT INTO images(image) VALUES ('$image')");
 
-        echo json_encode($response);
+        if ($result) {
+            $response["success"] = 1;
+            $response["message"] = "Successfully uploaded image";
 
-        $result2 = mysqli_query($db, "SELECT * FROM images WHERE image='$image'");
-        if (mysqli_num_rows($result2) > 0) {
-            while ($row = mysqli_fetch_array($result2)) {
-                $image_id = $row['id'];
-            }
-            $result3 = mysqli_query($db, "INSERT INTO image_teams(image_id, username, opdracht_ids, modifier_ids)
+            echo json_encode($response);
+
+            $result2 = mysqli_query($db, "SELECT * FROM images WHERE image='$image'");
+            if (mysqli_num_rows($result2) > 0) {
+                while ($row = mysqli_fetch_array($result2)) {
+                    $image_id = $row['id'];
+                }
+                $result3 = mysqli_query($db, "INSERT INTO image_teams(image_id, username, opdracht_ids, modifier_ids)
                                           VALUES('$image_id', '$username', '$opdracht_ids', '$modifier_ids')");
-            if ($result3) {
-                $response["success"] = 1;
-                $response["message"] = "Successfully added image with opdrachten";
+                if ($result3) {
+                    $response["success"] = 1;
+                    $response["message"] = "Successfully added image with opdrachten";
 
-                echo json_encode($response);
+                    echo json_encode($response);
+                } else {
+                    $response["success"] = 0;
+                    $response["message"] = "Failed to insert image in image_teams";
+
+                    echo json_encode($response);
+                }
             } else {
                 $response["success"] = 0;
-                $response["message"] = "Failed to insert image in image_teams";
+                $response["message"] = "Failed to get the image id";
 
                 echo json_encode($response);
             }
         } else {
             $response["success"] = 0;
-            $response["message"] = "Failed to get the image id";
+            $response["message"] = "Failed to insert image in images";
 
             echo json_encode($response);
         }
+
     } else {
         $response["success"] = 0;
-        $response["message"] = "Failed to insert image in images";
+        $response["message"] = "Image already exists";
 
         echo json_encode($response);
     }
+
 
 } else {
     $response["success"] = 0;

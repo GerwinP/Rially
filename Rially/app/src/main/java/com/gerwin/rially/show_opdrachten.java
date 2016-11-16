@@ -207,11 +207,22 @@ public class show_opdrachten extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
+
+                        String message = "";
+
+                        try {
+                            JSONObject jobj = new JSONObject(s);
+                            String jmessage = jobj.getString("message");
+                            message = jmessage.toString();
+                        } catch (JSONException e){
+                            e.printStackTrace();
+                        }
+
                         //Dismissing the progress dialog
                         loading.dismiss();
                         //Showing toast message of the response
                         System.out.println("RESPONSE: " + s);
-                        Toast.makeText(show_opdrachten.this, "Afbeelding succesvol geupload" , Toast.LENGTH_LONG).show();
+                        Toast.makeText(show_opdrachten.this, message , Toast.LENGTH_LONG).show();
                         finish();
                     }
                 },
