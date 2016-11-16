@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
                 <p><input class="form-control" type="password" id="password"  placeholder="Password" autofocus></p>
                 <label>Reenter password</label>
                 <p><input class="form-control" type="password" id="rePassword"  placeholder="Reenter Password" autofocus></p>
-                <p><label class="checkbox-label"><input class="form-control" type="checkbox" id="isAdmin">Is admin</label></p>
+                <p><input type="checkbox" id="isAdmin"><label for="isAdmin" class="checkbox-label" style="padding-left:3px;">Is admin</label></p>
                 <button id="add-user" class="btn btn-primary" >Add user</button>
                 <!-- THE OLD STUFF
                 <form role="form" action="add_user.php" method="post" >
