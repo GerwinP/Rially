@@ -11,66 +11,13 @@ session_start();
 require_once __DIR__ . '/../../db_config.php';
 
 if(!(isset($_SESSION['login']) && $_SESSION['login'] != "")) {
-    header("location: login");
-    echo "<script>window.location = 'http://www.google.com'</script>";
+    header("location: login.php");
 }
 
 $db = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_DATABASE);
 
 if ($db->connect_error) {
     die ('Connect error (' . $db->connect_errno . ')' . $db->connect_error);
-}
-
-if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
-        && isset($_POST['Password'])
-            && isset($_POST['RPassword'])
-                && isset($_POST['isAdmin'])) {
-
-    $response = array();
-
-
-
-    $username = $_POST['Username'];
-    $hpassword = hash("sha256", $_POST['Password']);
-    $hRpassword = hash("sha256", $_POST['RPassword']);
-    $isAdmin = $_POST['isAdmin'];
-
-    if ($username != "" && $_POST['Password'] != "") {
-        if ($hpassword == $hRpassword) {
-
-            //Check if the username already exists
-            $check = mysqli_query($db, "SELECT * FROM users WHERE username = '$username'");
-
-            if (mysqli_num_rows($check) == 0) {
-                $result = mysqli_query($db, "INSERT INTO users(username, password, admin) VALUES('$username', '$hpassword', '$isAdmin')");
-
-                if ($result) {
-                    create_error(0);
-                    $response["success"] = 1;
-                    $response["message"] = "User successfully created";
-                } else {
-                    $response["success"] = 0;
-                    $response["message"] = "Failed to create new user";
-                }
-            } else {
-                create_error(1);
-                $response["success"] = 0;
-                $response["message"] = "Username already exists";
-            }
-
-
-        } else {
-            create_error(2);
-            $response["success"] = 0;
-            $response["message"] = "Passwords are not equal";
-        }
-    } else {
-        create_error(3);
-        $response["success"] = 0;
-        $response["message"] = "Fields are still empty";
-    }
-
-
 }
 ?>
 
@@ -124,15 +71,27 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
     </nav>
 
     <div id="page-wrapper">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="page-header">Add User</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-5">
+                <h1 class="page-header">Add User</h1>
+                <!-- Hidden Warnings -->
+
+                <div class="alert-success-message">
+                    <div class="alert alert-success alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        Successfully added a new user
+                    </div>
+                </div>
+                <div class="alert-danger-message">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
+                        <span id = "failmessage">Failed to add a new user</span>
+                    </div>
+                </div>
+
+                <!-- /Hidden warnings -->
+
 
                 <label>Username</label>
                 <p><input class="form-control" type="text" id="username"  placeholder="Username" autofocus></p>
@@ -141,60 +100,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
                 <label>Reenter password</label>
                 <p><input class="form-control" type="password" id="rePassword"  placeholder="Reenter Password" autofocus></p>
                 <p><input type="checkbox" id="isAdmin"><label for="isAdmin" class="checkbox-label" style="padding-left:3px;">Is admin</label></p>
-                <button id="add-user" class="btn btn-primary" >Add user</button>
-                <!-- THE OLD STUFF
-                <form role="form" action="add_user.php" method="post" >
-
-                    <fieldset>
-                        <div class="form-group">
-                            <label>Username/Team name</label>
-                            <input class="form-control" placeholder="Username" name="Username" autofocus>
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input class="form-control" placeholder="Password" type="password" name="Password">
-                        </div>
-                        <div class="form-group">
-                            <label>Reenter password</label>
-                            <input class="form-control" placeholder="Reenter Password" type="password" name="RPassword">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="hidden" name="isAdmin" value="0">
-                                <input type="checkbox" name="isAdmin" value="1">
-                                Is admin
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </fieldset>
-                </form>
-                <?php
-                function create_error($error) {
-                    if ($error == 1) {
-                        echo "<div class=\"alert alert-danger alert-dismissable\"> 
-                                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                                The username already exists, try a different username.
-                                </div>";
-                    } elseif ($error == 2) {
-                        echo "<div class=\"alert alert-danger alert-dismissable\"> 
-                                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                                The passwords are not equal.
-                                </div>";
-                    } elseif ($error == 3) {
-                        echo "<div class=\"alert alert-warning alert-dismissable\"> 
-                                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                                Not all fields are filled.
-                                </div>";
-                    } elseif ($error == 0) {
-                        echo "<div class=\"alert alert-success alert-dismissable\"> 
-                                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
-                                User is successfully created.
-                                </div>";
-                    }
-                }
-                ?>
-                -->
+                <button id="add-user" class="btn btn-primary">Add user</button>
+                
             </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5">
+                <h1 class="page-header">Existing users</h1>
+                <div style="overflow:auto; height:600px;">
+                    <ul id="users"></ul>
+                </div>
+            </div>
+
+            <div class="col-lg-1"></div>
         </div>
     </div>
     <!-- /#page-wrapper -->
@@ -213,6 +132,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Username'])
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom JavaScipt -->
+<script src="../js/add_user.js"></script>
+
+<!-- Hash script -->
+<script src="../js/crypto-js/rollups/sha256.js"></script>
 
 </body>
 

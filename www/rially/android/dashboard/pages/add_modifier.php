@@ -86,7 +86,7 @@ if ($db->connect_error) {
                 <div class="alert-danger-message">
                     <div class="alert alert-danger alert-dismissable">
                         <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                        <span id = "failmessage">Failed to add a new assignment</span>
+                        <span id = "failmessage">Failed to add a new modifier</span>
                     </div>
                 </div>
 
