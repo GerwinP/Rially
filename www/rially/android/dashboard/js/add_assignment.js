@@ -34,6 +34,7 @@ $(function() {
                 url: '../../create_opdracht.php',
                 data: add_assignment,
                 success: function(response) {
+                    console.log(response);
                     var result = JSON.parse(response);
                     if (result.success == 1) {
                         $alertSuccess.fadeIn();
@@ -64,6 +65,15 @@ $(function() {
 
     $addAssignmentButton.mouseup(function(){
         $(this).blur();
-    })
+    });
+
+    $(document).ready(function(){
+       $assignment.keypress(function(e){
+           if(e.keyCode==13) {
+               $addAssignmentButton.click();
+               return false;
+           }
+       })
+    });
 });
 

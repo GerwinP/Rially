@@ -62,5 +62,14 @@ $(function() {
 
     $addModifier.mouseup(function() {
         $(this).blur();
-    })
+    });
+
+    $(document).ready(function(){
+        $modifier.keypress(function(e){
+            if(e.keyCode==13) {
+                $addModifier.click();
+                return false;
+            }
+        })
+    });
 });
