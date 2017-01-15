@@ -4,11 +4,13 @@
 
 $(function() {
 
-    var $assigments = $('#all-assignments');
+    var $assignments = $('#all-assignments');
     var $removeAssignments = $('#remove-assignment');
     var $noAssignments = $('#no-assignments');
     var $alertDanger = $('.alert-danger-message');
     var $alertSuccess = $('.alert-success-message');
+    var $selectAll = $('#select-all');
+    var $selectNone = $('#select-none');
 
     $.ajax({
         type:'GET',
@@ -16,12 +18,14 @@ $(function() {
         success: function(assignmentsReturn) {
             var assignments = JSON.parse(assignmentsReturn);
             $.each(assignments.opdrachten, function(i, assignment) {
-                $assigments.append("<li><label><input type='checkbox' id='" + assignment.id +"'> " + assignment.opdracht + "</label></li>");
+                $assignments.append("<li><label><input type='checkbox' id='" + assignment.id +"'> " + assignment.opdracht + "</label></li>");
             });
-            if ($assigments.children().length == 0) {
+            if ($assignments.children().length == 0) {
                 $noAssignments.show();
             } else {
                 $removeAssignments.show();
+                $selectAll.show();
+                $selectNone.show();
             }
         }
     });
@@ -30,7 +34,7 @@ $(function() {
         //var confirmResult = confirm("Are you sure you want to delete the selected assignments? \n They cannot be recovered");
         var message = "Are you sure you want to delete the selected assignments? \n They cannot be recovered";
         $('<div></div>').appendTo('body')
-            .html('<div><h6>' + message + '?</h6></div>')
+            .html('<div><h6>' + message + '</h6></div>')
             .dialog({
                 modal: true, title: 'Delete message', height: "auto",
                 width: '400', resizable: false,
@@ -66,8 +70,10 @@ $(function() {
                                 setTimeout(function() {
                                     $alertSuccess.fadeOut(1000);
                                 }, 5000);
-                                if ($assigments.children().length == 0) {
+                                if ($assignments.children().length == 0) {
                                     $removeAssignments.hide();
+                                    $selectAll.hide();
+                                    $selectNone.hide();
                                     $noAssignments.show();
                                 }
                             }
@@ -92,6 +98,22 @@ $(function() {
 
     $removeAssignments.mouseup(function(){
         $(this).blur();
-    })
+    });
+
+    $selectAll.mouseup(function() {
+        $(this).blur();
+    });
+
+    $selectNone.mouseup(function() {
+       $(this).blur();
+    });
+
+    $selectAll.on('click', function() {
+        $assignments.find(":checkbox").prop('checked', true);
+    });
+
+    $selectNone.on('click', function() {
+       $assignments.find(":checkbox").prop('checked', false);
+    });
 
 });

@@ -105,6 +105,8 @@ if ($db->connect_error) {
             <div class="col-lg-12">
                 <span id="no-assignments">There are no assignments currently in the database, try adding a few <a href="add_assignment.php">here</a></span>
                 <button id="remove-assignment" class="btn btn-danger" >Remove selected assignments</button>
+                <button id="select-all" class="btn btn-primary">Select all assignments</button>
+                <button id="select-none" class="btn btn-primary">Select none</button>
                 <ul id="all-assignments" class="list-unstyled"></ul>
             </div>
         </div>

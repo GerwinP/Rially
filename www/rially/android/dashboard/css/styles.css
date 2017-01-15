@@ -50,3 +50,11 @@ li img:hover {
 #remove-modifier {
     display: none;
 }
+
+#select-all {
+    display: none;
+}
+
+#select-none {
+    display: none;
+}

@@ -9,6 +9,8 @@ $(function() {
     var $noModifiers = $('#no-modifiers');
     var $alertDanger = $('.alert-danger-message');
     var $alertSuccess = $('.alert-success-message');
+    var $selectAll = $('#select-all');
+    var $selectNone = $('#select-none');
 
     $.ajax({
         type:'GET',
@@ -22,6 +24,8 @@ $(function() {
                 $noModifiers.show();
             } else {
                 $removeModifiers.show();
+                $selectAll.show();
+                $selectNone.show();
             }
         }
     });
@@ -30,7 +34,7 @@ $(function() {
 
         var message = "Are you sure you want to delete the selected modifiers? \n They cannot be recovered";
         $('<div></div>').appendTo('body')
-            .html('<div><h6>' + message + '?</h6></div>')
+            .html('<div><h6>' + message + '</h6></div>')
             .dialog({
                 modal: true, title: 'Delete message', height: "auto",
                 width: '400', resizable: false,
@@ -68,6 +72,8 @@ $(function() {
                                 }, 5000);
                                 if ($modifiers.children().length == 0) {
                                     $removeModifiers.hide();
+                                    $selectAll.hide();
+                                    $selectNone.hide();
                                     $noModifiers.show();
                                 }
                             }
@@ -92,6 +98,22 @@ $(function() {
 
     $removeModifiers.mouseup(function(){
         $(this).blur();
-    })
+    });
+
+    $selectAll.mouseup(function() {
+        $(this).blur();
+    });
+
+    $selectNone.mouseup(function() {
+        $(this).blur();
+    });
+
+    $selectAll.on('click', function() {
+        $modifiers.find(":checkbox").prop('checked', true);
+    });
+
+    $selectNone.on('click', function() {
+        $modifiers.find(":checkbox").prop('checked', false);
+    });
 
 });

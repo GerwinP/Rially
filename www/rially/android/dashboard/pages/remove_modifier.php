@@ -104,6 +104,8 @@ if ($db->connect_error) {
             <div class="col-lg-12">
                 <span id="no-modifiers">There are no modifiers currently in the database, try adding a few <a href="add_modifier.php">here</a></span>
                 <button id="remove-modifier" class="btn btn-danger" >Remove selected modifiers</button>
+                <button id="select-all" class="btn btn-primary">Select all assignments</button>
+                <button id="select-none" class="btn btn-primary">Select none</button>
                 <ul id="all-modifiers" class="list-unstyled"></ul>
             </div>
         </div>
