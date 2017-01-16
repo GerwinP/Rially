@@ -5,19 +5,30 @@
 $(function() {
 
     var $assignments = $('#assignments');
-    var $assignment = $('#assignment');
-    var $addAssignmentButton = $('#add-assignment');
+
+    //Alerts
     var $alertDanger = $('.alert-danger-message');
     var $alertSuccess = $('.alert-success-message');
+
+    //Select assignments block
+
+    //Search assignments block
+
+    //Add assignments block
+    var $assignment = $('#assignment');
+    var $addAssignmentButton = $('#add-assignment');
+    var $addPanel = $('#add-panel');
+
+    // Remove assignment block
+    var $assignmentCount = $('#assignment-count');
 
     $.ajax({
        type: 'GET',
         url: '../../get_all_opdrachten.php',
         success: function(assignmentsReturn) {
-            var dingen = JSON.parse(assignmentsReturn);
-            //console.log(dingen.opdrachten[0]);
-            $.each(dingen.opdrachten, function(i, ding) {
-               $assignments.append('<li>' + ding.opdracht + '</li>');
+            var assignments = JSON.parse(assignmentsReturn);
+            $.each(assignments.opdrachten, function(i, assignment) {
+               $assignments.append("<li><label><input type='checkbox' id='" + assignment.id +"'> " + assignment.opdracht + "</label></li>");
             });
         }
     });
@@ -34,14 +45,13 @@ $(function() {
                 url: '../../create_opdracht.php',
                 data: add_assignment,
                 success: function(response) {
-                    console.log(response);
                     var result = JSON.parse(response);
                     if (result.success == 1) {
-                        $alertSuccess.fadeIn();
                         document.getElementById("assignment").value = "";
-                        $assignments.append('<li>' + result.opdracht + '</li>');
+                        $assignments.append("<li><label><input type='checkbox' id='" + result.id +"'> " + result.opdracht + "</label></li>");
+                        $addPanel.addClass("panel-success");
                         setTimeout(function() {
-                            $alertSuccess.fadeOut(1000);
+                            $addPanel.removeClass("panel-success");
                         }, 5000);
                     } else {
                         $('#failmessage').text(result.message);
@@ -67,13 +77,24 @@ $(function() {
         $(this).blur();
     });
 
-    $(document).ready(function(){
-       $assignment.keypress(function(e){
-           if(e.keyCode==13) {
-               $addAssignmentButton.click();
-               return false;
-           }
-       })
+    $assignment.keypress(function(e){
+        if(e.keyCode==13) {
+            $addAssignmentButton.click();
+            return false;
+        }
+    });
+
+    $assignments.on('change', ':checkbox', function() {
+
+        var count = $assignments.find(':checked').length;
+
+        if (count == 0) {
+            $assignmentCount.text("There are no assignments selected.");
+        } else if (count == 1) {
+            $assignmentCount.text("There is " + count + " assignment selected.");
+        } else {
+            $assignmentCount.text("There are " + count + " assignments selected.");
+        }
     });
 });
 

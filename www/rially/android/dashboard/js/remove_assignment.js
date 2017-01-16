@@ -11,7 +11,9 @@ $(function() {
     var $alertSuccess = $('.alert-success-message');
     var $selectAll = $('#select-all');
     var $selectNone = $('#select-none');
-
+    var $reverseAll = $('#reverse-all');
+    var $assignmentsCount = $('#assignment-count');
+    
     $.ajax({
         type:'GET',
         url: '../../get_all_opdrachten.php',
@@ -65,6 +67,7 @@ $(function() {
                                 $.each(result, function(i, id) {
                                     $("input:checkbox[id^=" + id +"]").parents("li").remove();
                                 });
+                                $assignmentsCount.text("There are no assignments selected.");
                                 $('#successMessage').text("Successfully removed " + checked +" assignment(s)");
                                 $alertSuccess.fadeIn();
                                 setTimeout(function() {
@@ -93,7 +96,6 @@ $(function() {
             });
         $('.ui-dialog :button').blur();
 
-
     });
 
     $removeAssignments.mouseup(function(){
@@ -108,12 +110,35 @@ $(function() {
        $(this).blur();
     });
 
+    $reverseAll.mouseup(function() {
+        $(this).blur();
+    });
+
     $selectAll.on('click', function() {
-        $assignments.find(":checkbox").prop('checked', true);
+        $assignments.find(":checkbox").prop('checked', true).change();
     });
 
     $selectNone.on('click', function() {
-       $assignments.find(":checkbox").prop('checked', false);
+       $assignments.find(":checkbox").prop('checked', false).change();
     });
 
+    $reverseAll.on('click', function() {
+        $assignments.find(':checkbox').each(function() {
+            $(this).is(':checked') ? $(this).prop('checked', false).change() : $(this).prop('checked', true).change();
+        })
+    });
+
+    $assignments.on('change', ':checkbox', function() {
+
+        var count = $assignments.find(':checked').length;
+
+        if (count == 0) {
+            $assignmentsCount.text("There are no assignments selected.");
+        } else if (count == 1) {
+            $assignmentsCount.text("There is " + count + " assignment selected.");
+        } else {
+            $assignmentsCount.text("There are " + count + " assignments selected.");
+        }
+
+    })
 });

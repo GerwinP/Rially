@@ -107,6 +107,8 @@ if ($db->connect_error) {
                 <button id="remove-assignment" class="btn btn-danger" >Remove selected assignments</button>
                 <button id="select-all" class="btn btn-primary">Select all assignments</button>
                 <button id="select-none" class="btn btn-primary">Select none</button>
+                <button id="reverse-all" class="btn btn-primary">Reverse selected</button>
+                <p><span id="assignment-count">There are no assignments selected.</span></p>
                 <ul id="all-assignments" class="list-unstyled"></ul>
             </div>
         </div>

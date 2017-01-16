@@ -73,8 +73,31 @@ if ($db->connect_error) {
 
     <div id="page-wrapper">
         <div class="row">
+
             <div class="col-lg-5">
-                <h1 class="page-header">Add new assignment</h1>
+                <h1 class="page-header">Existing Assignments</h1>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Selection options</div>
+                    <div class="panel-body">
+                        <button id="select-all" class="btn btn-primary">Select all assignments</button>
+                        <button id="select-none" class="btn btn-primary">Deselect all assignments</button>
+                        <button id="reverse-selected" class="btn btn-primary">Reverse selected assignments</button>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div style="overflow:auto; height:650px;">
+                        <ul class="list-unstyled" id="assignments"></ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5">
+                <h1 class="page-header">Options</h1>
 
                 <!-- Hidden Warnings -->
 
@@ -92,24 +115,37 @@ if ($db->connect_error) {
                 </div>
                 
                 <!-- /Hidden warnings -->
-                
-                <label>Assignment</label>
-                <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
-                <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
-            </div>
 
-            
-
-            <div class="col-lg-1"></div>
-
-            <div class="col-lg-5">
-                <h1 class="page-header">Existing Assignments</h1>
-                <div style="overflow:auto; height:600px;">
-                    <ul id="assignments"></ul>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search assignment</div>
+                    <div class="panel-body">
+                        <label>Search</label>
+                        <p><input class="form-control" type="text" id="search-field" placeholder="Search"></p>
+                        <button id="search-assignment" class="btn btn-primary">Search assignment</button>
+                    </div>
                 </div>
+
+                <div class="panel panel-default" id="add-panel">
+                    <div class="panel-heading">Add new assignment</div>
+                    <div class="panel-body">
+                        <label>Assignment</label>
+                        <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
+                        <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Delete assignments</div>
+                    <div class="panel-body">
+                        <p><button id="remove-assignment" class="btn btn-danger">Remove selected assignments</button></p>
+                        <p><span id="assignment-count">There are currently no assignments selected.</span></p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-lg-1"></div>
+
         </div>
     </div>
     <!-- /#page-wrapper -->
