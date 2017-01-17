@@ -11,16 +11,25 @@ $(function() {
     var $alertSuccess = $('.alert-success-message');
 
     //Select assignments block
+    var $selectAll = $('#select-all');
+    var $selectNone = $('#select-none');
+    var $reverseSelected = $('#reverse-selected');
 
     //Search assignments block
+    var $searchPanel = $('#search-panel');
+    var $searchPanelHeading = $('#search-panel-heading');
 
     //Add assignments block
     var $assignment = $('#assignment');
     var $addAssignmentButton = $('#add-assignment');
     var $addPanel = $('#add-panel');
+    var $addPanelHeading = $('#add-panel-heading');
 
     // Remove assignment block
     var $assignmentCount = $('#assignment-count');
+    var $removeAssignments = $('#remove-assignment');
+    var $removePanel = $('#remove-panel');
+    var $removePanelHeading = $('#remove-panel-heading');
 
     $.ajax({
        type: 'GET',
@@ -50,33 +59,118 @@ $(function() {
                         document.getElementById("assignment").value = "";
                         $assignments.append("<li><label><input type='checkbox' id='" + result.id +"'> " + result.opdracht + "</label></li>");
                         $addPanel.addClass("panel-success");
+                        var text = $addPanelHeading.text();
+                        $addPanelHeading.text("Assignment successfully added to database.");
                         setTimeout(function() {
                             $addPanel.removeClass("panel-success");
+                            $addPanelHeading.text(text);
                         }, 5000);
                     } else {
-                        $('#failmessage').text(result.message);
-                        $alertDanger.fadeIn();
+                        $addPanel.addClass("panel-danger");
                         setTimeout(function() {
-                            $alertDanger.fadeOut(1000);
+                            $addPanel.removeClass("panel-danger");
                         }, 5000);
                     }
                 }
             });
         } else {
-            $('#failmessage').text("The required field is still empty");
-            $alertDanger.fadeIn();
+            $addPanel.addClass("panel-danger");
+            var text = $addPanelHeading.text();
+            $addPanelHeading.text("The text field is still empty");
             setTimeout(function() {
-                $alertDanger.fadeOut(1000);
+                $addPanel.removeClass("panel-danger");
+                $addPanelHeading.text(text);
             }, 5000);
         }
 
 
     });
 
-    $addAssignmentButton.mouseup(function(){
+    //Functions for the selection buttons for the assignments list.
+    $selectAll.on('click', function() {
+       $assignments.find(":checkbox").prop('checked', true).change();
+    });
+
+    $selectNone.on('click', function() {
+        $assignments.find(":checkbox").prop('checked', false).change();
+    });
+
+    $reverseSelected.on('click', function() {
+        $assignments.find(':checkbox').each(function() {
+            $(this).is(':checked') ? $(this).prop('checked', false).change() : $(this).prop('checked', true).change();
+        })
+    });
+
+    //Removal of selected assignments
+    $removeAssignments.on('click', function() {
+        if ($assignments.find(":checked").length == 0) {
+            console.log("No assignments selected");
+        } else {
+            //var confirmResult = confirm("Are you sure you want to delete the selected assignments? \n They cannot be recovered");
+            var message = "Are you sure you want to delete the selected assignments? \n They cannot be recovered";
+            $('<div></div>').appendTo('body')
+                .html('<div><h6>' + message + '</h6></div>')
+                .dialog({
+                    modal: true, title: 'Delete message', height: "auto",
+                    width: '400', resizable: false,
+                    buttons: {
+                        "Delete assignments" : function () {
+                            var ids = [];
+                            var data = {
+                                ids : ids
+                            };
+
+                            var checked = 0;
+
+                            $("input:checkbox").each(function() {
+                                var $this = $(this);
+                                if ($this.is(":checked")) {
+                                    ids.push($this.attr("id"));
+                                    checked = checked+1;
+                                }
+                            });
+
+                            $.ajax({
+                                type:'POST',
+                                url:'../../remove_assignments.php',
+                                data:data,
+                                success: function(successReturn) {
+                                    var result = JSON.parse(successReturn);
+
+                                    $.each(result, function(i, id) {
+                                        $("input:checkbox[id^=" + id +"]").parents("li").remove();
+                                    });
+                                    $assignmentCount.text("There are currently no assignments selected.");
+                                    $('#successMessage').text("Successfully removed " + checked +" assignment(s)");
+                                    $alertSuccess.fadeIn();
+                                    setTimeout(function() {
+                                        $alertSuccess.fadeOut(1000);
+                                    }, 5000);
+                                }
+                            });
+
+                            $(this).dialog("close");
+                        },
+                        No: function () {
+                            $(this).dialog("close");
+                        }
+
+                    },
+                    close: function (event, ui) {
+                        $(this).remove();
+                    }
+
+                });
+            $('.ui-dialog :button').blur();
+        }
+    });
+
+    //Functions for every button to make sure it is not still in hovering state.
+    $(':button').mouseup(function() {
         $(this).blur();
     });
 
+    //Check for enter keypress
     $assignment.keypress(function(e){
         if(e.keyCode==13) {
             $addAssignmentButton.click();
@@ -84,6 +178,7 @@ $(function() {
         }
     });
 
+    //Checked assignment count
     $assignments.on('change', ':checkbox', function() {
 
         var count = $assignments.find(':checked').length;

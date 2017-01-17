@@ -35,6 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['opdracht'])) {
                 //successfully inserted into database
                 $response["success"] = 1;
                 $response["message"] = "Assignment successfully created";
+                $id = mysqli_query($db, "SELECT id FROM opdrachten WHERE opdracht = '$opdracht'");
+                $row = mysqli_fetch_array($id);
+                $response["id"] = $row["id"];
                 $response["opdracht"] = $opdracht;
 
                 //echoing JSON response

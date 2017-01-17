@@ -35,6 +35,9 @@ if ($db->connect_error) {
 
     <title>Rially Admin - Add Assignment</title>
 
+    <!-- jQuery UI CSS -->
+    <link href="../vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -116,8 +119,8 @@ if ($db->connect_error) {
                 
                 <!-- /Hidden warnings -->
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">Search assignment</div>
+                <div class="panel panel-default" id="search-panel">
+                    <div class="panel-heading" id="search-panel-heading">Search assignment</div>
                     <div class="panel-body">
                         <label>Search</label>
                         <p><input class="form-control" type="text" id="search-field" placeholder="Search"></p>
@@ -126,7 +129,7 @@ if ($db->connect_error) {
                 </div>
 
                 <div class="panel panel-default" id="add-panel">
-                    <div class="panel-heading">Add new assignment</div>
+                    <div class="panel-heading" id="add-panel-heading">Add new assignment</div>
                     <div class="panel-body">
                         <label>Assignment</label>
                         <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
@@ -134,8 +137,8 @@ if ($db->connect_error) {
                     </div>
                 </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">Delete assignments</div>
+                <div class="panel panel-default" id="remove-panel">
+                    <div class="panel-heading" id="remove-panel-heading">Delete assignments</div>
                     <div class="panel-body">
                         <p><button id="remove-assignment" class="btn btn-danger">Remove selected assignments</button></p>
                         <p><span id="assignment-count">There are currently no assignments selected.</span></p>
@@ -167,6 +170,9 @@ if ($db->connect_error) {
 
 <!-- Custom ajax script -->
 <script src="../js/add_assignment.js"></script>
+
+<!-- jQuery UI Javascript -->
+<script src="../vendor/jquery-ui/jquery-ui.min.js"></script>
 
 </body>
 
