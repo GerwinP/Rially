@@ -31,6 +31,10 @@ $(function() {
     var $removePanel = $('#remove-panel');
     var $removePanelHeading = $('#remove-panel-heading');
 
+    // Strings
+    var addAssignmenttext = "Add new assignment";
+    var addedSuccesstext = "Assignment successfully added to database.";
+
     $.ajax({
        type: 'GET',
         url: '../../get_all_opdrachten.php',
@@ -59,11 +63,10 @@ $(function() {
                         document.getElementById("assignment").value = "";
                         $assignments.append("<li><label><input type='checkbox' id='" + result.id +"'> " + result.opdracht + "</label></li>");
                         $addPanel.addClass("panel-success");
-                        var text = $addPanelHeading.text();
-                        $addPanelHeading.text("Assignment successfully added to database.");
+                        $addPanelHeading.text(addedSuccesstext);
                         setTimeout(function() {
                             $addPanel.removeClass("panel-success");
-                            $addPanelHeading.text(text);
+                            $addPanelHeading.text(addAssignmenttext);
                         }, 5000);
                     } else {
                         $addPanel.addClass("panel-danger");
