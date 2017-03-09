@@ -34,6 +34,7 @@ $(function() {
     // Strings
     var addAssignmenttext = "Add new assignment";
     var addedSuccesstext = "Assignment successfully added to database.";
+    var removeAssignmenttext = "Delete assignments";
 
     $.ajax({
        type: 'GET',
@@ -144,10 +145,11 @@ $(function() {
                                         $("input:checkbox[id^=" + id +"]").parents("li").remove();
                                     });
                                     $assignmentCount.text("There are currently no assignments selected.");
-                                    $('#successMessage').text("Successfully removed " + checked +" assignment(s)");
-                                    $alertSuccess.fadeIn();
+                                    $removePanel.addClass("panel-danger");
+                                    $removePanelHeading.text("Successfully remove " + checked + " assignment(s)");
                                     setTimeout(function() {
-                                        $alertSuccess.fadeOut(1000);
+                                        $removePanel.removeClass("panel-danger");
+                                        $removePanelHeading.text(removeAssignmenttext);
                                     }, 5000);
                                 }
                             });
