@@ -68,9 +68,9 @@ $account = $_GET['username'];
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
-        <?php include "page_parts/header.html"?>
+        <div id="header-import"></div>
 
-        <?php include "page_parts/navbar.html" ?>
+        <div id="navbar-import"></div>
 
     </nav>
 
@@ -101,7 +101,7 @@ $account = $_GET['username'];
                             if (mysqli_num_rows($result_image) > 0) {
                                 while($row = mysqli_fetch_array($result_image)) {
                                     $image = base64_decode($row['image']);
-                                    echo '<li><img class="team_image" src = "data:image/jpeg;base64,' . base64_encode($image) . '"/></li>';
+                                    echo '<li><img class="img-thumbnail team_image" src = "data:image/jpeg;base64,' . base64_encode($image) . '"/></li>';
                                 }
                             }
                         }
@@ -130,6 +130,9 @@ $account = $_GET['username'];
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom script for generating participants list -->
+<script src="../js/global-javascript.js"></script>
 
 </body>
 

@@ -35,17 +35,7 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-user fa-fw"></i> Participants<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <?php
-                            $result = mysqli_query($db, "SELECT id,username FROM users");
-
-                            while ($row = mysqli_fetch_array($result)) {
-                                $username = $row["username"];
-                                $uid = $row["id"];
-                                echo "<li> <a href='viewimages.php?username=$username'>$username</a></li>";
-                        }
-                        ?>
-                    </ul>
+                    <ul id="participants" class="nav nav-second-level"></ul>
                 </li>
             </ul>
         </div>

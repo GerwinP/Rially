@@ -67,10 +67,10 @@ if ($db->connect_error) {
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        
+        <div id="header-import"></div>
 
-        <?php include "page_parts/header.html"?>
-
-        <?php include "page_parts/navbar.html" ?>
+        <div id="navbar-import"></div>
 
     </nav>
 
@@ -83,9 +83,11 @@ if ($db->connect_error) {
                 <div class="panel panel-default">
                     <div class="panel-heading">Selection options</div>
                     <div class="panel-body">
-                        <button id="select-all" class="btn btn-primary">Select all assignments</button>
-                        <button id="select-none" class="btn btn-primary">Deselect all assignments</button>
-                        <button id="reverse-selected" class="btn btn-primary">Reverse selected assignments</button>
+                        <div class="row">
+                            <div class="col-lg-4 center-block"><button id="select-all" class="btn btn-primary">Select all</button></div>
+                            <div class="col-lg-4 center-block"><button id="select-none" class="btn btn-primary">Deselect all</button></div>
+                            <div class="col-lg-4 center-block"><button id="reverse-selected" class="btn btn-primary">Reverse selected</button></div>
+                        </div>
                     </div>
                 </div>
 
@@ -101,23 +103,6 @@ if ($db->connect_error) {
 
             <div class="col-lg-5">
                 <h1 class="page-header">Options</h1>
-
-                <!-- Hidden Warnings -->
-
-                <div class="alert-success-message">
-                    <div class="alert alert-success alert-dismissable">
-                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                        Successfully added a new assignment
-                    </div>
-                </div>
-                <div class="alert-danger-message">
-                    <div class="alert alert-danger alert-dismissable">
-                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                        <span id = "failmessage">Failed to add a new assignment</span>
-                    </div>
-                </div>
-                
-                <!-- /Hidden warnings -->
 
                 <div class="panel panel-default" id="search-panel">
                     <div class="panel-heading" id="search-panel-heading">Search assignment</div>
@@ -172,7 +157,10 @@ if ($db->connect_error) {
 <script src="../js/add_assignment.js"></script>
 
 <!-- jQuery UI Javascript -->
-<script src="../vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../vendor/jquery-ui/jquery-ui.min.js"></script>\
+
+<!-- Custom script for generating participants list -->
+<script src="../js/global-javascript.js"></script>
 
 </body>
 

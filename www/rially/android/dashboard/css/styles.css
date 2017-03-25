@@ -33,6 +33,20 @@ li img:hover {
     display: none;
 }
 
+.unstyled-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.list-unstyled {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.team_image {
+    width: 20%;
+}
+
 /*
 #no-assignments {
     display: none;

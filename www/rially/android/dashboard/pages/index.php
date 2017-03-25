@@ -68,9 +68,9 @@ if ($db->connect_error) {
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
-        <?php include "page_parts/header.html"?>
+        <div id="header-import"></div>
 
-        <?php include "page_parts/navbar.html" ?>
+        <div id="navbar-import"></div>
 
     </nav>
 
@@ -635,6 +635,9 @@ if ($db->connect_error) {
 
 <!-- Custom Theme JavaScript -->
 <script src="../dist/js/sb-admin-2.js"></script>
+
+<!-- Custom script for generating participants list -->
+<script src="../js/global-javascript.js"></script>
 
 </body>
 

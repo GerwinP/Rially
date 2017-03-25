@@ -20,7 +20,7 @@ $(function() {
             var users = JSON.parse(userResult);
             $.each(users.users, function(i, user) {
                if (user.admin == 1) {
-                   $users.append('<li><b>' + user.username + '</b></li>');
+                   $users.append('<li>' + user.username + ' <i>(admin)</i></li>');
                } else {
                    $users.append('<li>' + user.username + '</li>');
                }
@@ -61,7 +61,7 @@ $(function() {
                             $rePassword.val("");
                             $isAdmin.prop("checked", false);
                             if (isAdmin == 1) {
-                                $users.append('<li><b>' + result.username + '</b></li>');
+                                $users.append('<li>' + result.username + ' <i>(admin)</i></li>');
                             } else {
                                 $users.append('<li>' + result.username + '</li>');
                             }

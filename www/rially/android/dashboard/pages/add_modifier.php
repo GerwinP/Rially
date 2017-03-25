@@ -67,9 +67,9 @@ if ($db->connect_error) {
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
-        <?php include "page_parts/header.html"?>
+        <div id="header-import"></div>
 
-        <?php include "page_parts/navbar.html" ?>
+        <div id="navbar-import"></div>
 
     </nav>
 
@@ -81,9 +81,12 @@ if ($db->connect_error) {
                 <div class="panel panel-default">
                     <div class="panel-heading">Selection options</div>
                     <div class="panel-body">
-                        <button id="select-all" class="btn btn-primary">Select all modifiers</button>
-                        <button id="select-none" class="btn btn-primary">Deselect all modifiers</button>
-                        <button id="reverse-selected" class="btn btn-primary">Reverse selected modifiers</button>
+                        <div class="row">
+                            <div class="col-lg-4 center-block"><button id="select-all" class="btn btn-primary">Select all</button></div>
+                            <div class="col-lg-4 center-block"><button id="select-none" class="btn btn-primary">Deselect all</button></div>
+                            <div class="col-lg-4 center-block"><button id="reverse-selected" class="btn btn-primary">Reverse selected</button></div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -152,6 +155,9 @@ if ($db->connect_error) {
 
 <!-- jQuery UI Javascript -->
 <script src="../vendor/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Custom script for generating participants list -->
+<script src="../js/global-javascript.js"></script>
 
 </body>
 
