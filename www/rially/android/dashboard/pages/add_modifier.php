@@ -37,6 +37,9 @@ if ($db->connect_error) {
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- jQuery UI CSS -->
+    <link href="../vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
@@ -73,38 +76,55 @@ if ($db->connect_error) {
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-5">
-                <h1 class="page-header">Add new modifier</h1>
+                <h1 class="page-header">Existing modifiers</h1>
 
-                <!-- Hidden Warnings -->
-
-                <div class="alert-success-message">
-                    <div class="alert alert-success alert-dismissable">
-                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                        Successfully added a new modifier
-                    </div>
-                </div>
-                <div class="alert-danger-message">
-                    <div class="alert alert-danger alert-dismissable">
-                        <button class="close" type="button" data-dismiss="alert" aria-hidden="true">x</button>
-                        <span id = "failmessage">Failed to add a new modifier</span>
+                <div class="panel panel-default">
+                    <div class="panel-heading">Selection options</div>
+                    <div class="panel-body">
+                        <button id="select-all" class="btn btn-primary">Select all modifiers</button>
+                        <button id="select-none" class="btn btn-primary">Deselect all modifiers</button>
+                        <button id="reverse-selected" class="btn btn-primary">Reverse selected modifiers</button>
                     </div>
                 </div>
 
-                <!-- /Hidden warnings -->
-
-                <label>Modifier</label>
-                <p><input class="form-control" type="text" id="modifier"  placeholder="Modifier" autofocus></p>
-                <button id="add-modifier" class="btn btn-primary" >Add modifier</button>
+                <div class="panel panel-default">
+                    <div style="overflow:auto; height:650px">
+                        <ul class="list-unstyled" id="modifiers"></ul>
+                    </div>
+                </div>
             </div>
 
             <div class="col-lg-1"></div>
 
-            <!-- /.col-lg-12 -->
             <div class="col-lg-5">
-                <h1 class="page-header">Existing modifiers</h1>
-                <div style="overflow:auto; height:600px;">
-                    <ul id="modifiers"></ul>
+                <h1 class="page-header">Options</h1>
+
+                <div class="panel panel-default" id="search-panel">
+                    <div class="panel-heading" id="search-panel-heading">Search modifier</div>
+                    <div class="panel-body">
+                        <label>Search</label>
+                        <p><input class="form-control" type="text" id="search-field" placeholder="Search"></p>
+                        <button id="search-modifier" class="btn btn-primary">Search modifier</button>
+                    </div>
                 </div>
+
+                <div class="panel panel-default" id="add-panel">
+                    <div class="panel-heading" id="add-panel-heading">Add new modifier</div>
+                    <div class="panel-body">
+                        <label>Modifier</label>
+                        <p><input class="form-control" type="text" id="modifier"  placeholder="Modifier" autofocus></p>
+                        <button id="add-modifier" class="btn btn-primary" >Add modifier</button>
+                    </div>
+                </div>
+
+                <div class="panel panel-default" id="remove-panel">
+                    <div class="panel-heading" id="remove-panel-heading">Delete modifiers</div>
+                    <div class="panel-body">
+                        <p><button id="remove-modifier" class="btn btn-danger">Remove selected modifier</button></p>
+                        <p><span id="modifier-count">There are currently no modifiers selected.</span></p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-lg-1"></div>
@@ -129,6 +149,9 @@ if ($db->connect_error) {
 
 <!-- Custom script for loading and adding stuff -->
 <script src="../js/add_modifier.js"></script>
+
+<!-- jQuery UI Javascript -->
+<script src="../vendor/jquery-ui/jquery-ui.min.js"></script>
 
 </body>
 
