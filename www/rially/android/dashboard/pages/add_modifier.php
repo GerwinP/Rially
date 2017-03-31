@@ -105,7 +105,6 @@ if ($db->connect_error) {
                 <div class="panel panel-default" id="search-panel">
                     <div class="panel-heading" id="search-panel-heading">Search modifier</div>
                     <div class="panel-body">
-                        <label>Search</label>
                         <p><input class="form-control" type="text" id="search-field" placeholder="Search"></p>
                         <button id="search-modifier" class="btn btn-primary">Search modifier</button>
                     </div>
@@ -114,7 +113,6 @@ if ($db->connect_error) {
                 <div class="panel panel-default" id="add-panel">
                     <div class="panel-heading" id="add-panel-heading">Add new modifier</div>
                     <div class="panel-body">
-                        <label>Modifier</label>
                         <p><input class="form-control" type="text" id="modifier"  placeholder="Modifier" autofocus></p>
                         <button id="add-modifier" class="btn btn-primary" >Add modifier</button>
                     </div>

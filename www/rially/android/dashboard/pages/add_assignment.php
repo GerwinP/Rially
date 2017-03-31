@@ -107,7 +107,6 @@ if ($db->connect_error) {
                 <div class="panel panel-default" id="search-panel">
                     <div class="panel-heading" id="search-panel-heading">Search assignment</div>
                     <div class="panel-body">
-                        <label>Search</label>
                         <p><input class="form-control" type="text" id="search-field" placeholder="Search"></p>
                         <button id="search-assignment" class="btn btn-primary">Search assignment</button>
                     </div>
@@ -116,7 +115,6 @@ if ($db->connect_error) {
                 <div class="panel panel-default" id="add-panel">
                     <div class="panel-heading" id="add-panel-heading">Add new assignment</div>
                     <div class="panel-body">
-                        <label>Assignment</label>
                         <p><input class="form-control" type="text" id="assignment"  placeholder="Assignment" autofocus></p>
                         <button id="add-assignment" class="btn btn-primary" >Add assignment</button>
                     </div>
